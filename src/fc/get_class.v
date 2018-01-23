@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : get_class.v
 //  Created On    : 2018-01-23 09:28:48
-//  Last Modified : 2018-01-23 14:56:17
+//  Last Modified : 2018-01-23 13:32:58
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -39,7 +39,7 @@ input [15:0]  class5;
 input [15:0]  class6;
 input [15:0]  class7;
 input [15:0]  class8;
-input [15:0]  class9;	
+input [15:0]  class9;		
 
 output [15:0] class_value;
 output [3:0]  class_index;
@@ -65,11 +65,11 @@ assign value_4_5 =  class4 > class5 ? class4 : class5;
 assign value_6_7 =  class6 > class7 ? class6 : class7;
 assign value_8_9 =  class8 > class9 ? class8 : class9;
 
-assign index_0_1 = class0 > class1 ? 0:1;
-assign index_2_3 = class2 > class3 ? 2:3;
-assign index_4_5 = class4 > class5 ? 4:5;
-assign index_6_7 = class6 > class7 ? 6:7;
-assign index_8_9 = class8 > class9 ? 8:9;
+assign index_0_1 = class0 > class1 ? 4'b0:4'b1;
+assign index_2_3 = class2 > class3 ? 4'd2:4'd3;
+assign index_4_5 = class4 > class5 ? 4'd4:4'd5;
+assign index_6_7 = class6 > class7 ? 4'd6:4'd7;
+assign index_8_9 = class8 > class9 ? 4'd8:4'd9;
 
 reg [15:0] value_0_1_r;
 reg [15:0] value_2_3_r;
@@ -133,7 +133,7 @@ assign value_s3_0 = value_s2_0_r > value_s2_1_r? value_s2_0_r:value_s2_1_r;
 assign value_s3_1 = value_s2_2_r;
 
 assign index_s3_0 = value_s2_0_r > value_s2_1_r? index_s2_0_r:index_s2_1_r;
-assign index_s3_1 = value_s2_2_r;
+assign index_s3_1 = index_s2_2_r;
 
 reg [15:0] value_s3_0_r,value_s3_1_r;
 reg [3:0]  index_s3_0_r,index_s3_1_r;
