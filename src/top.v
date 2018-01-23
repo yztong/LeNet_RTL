@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : top.v
 //  Created On    : 2018-01-09 13:02:33
-//  Last Modified : 2018-01-23 20:32:35
+//  Last Modified : 2018-01-23 23:12:12
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -41,6 +41,8 @@ output [3:0]  class_index;
 
 
 /*autodef*/
+wire get_class_start;
+wire get_class_done;
 wire [3:0]f1_wr_en;
 wire [31:0]f1_waddr;
 wire wclk;
@@ -2394,6 +2396,7 @@ shared_mac_bank shared_mac_bank(/*autoinst*/
 			.fc3_clr(fc3_clr));
 
 get_class	get_class(/*autoinst*/
+			.get_class_done(get_class_done),
 			.class_value(class_value[15:0]),
 			.class_index(class_index[3:0]),
 			.clk(clk),
@@ -2406,7 +2409,8 @@ get_class	get_class(/*autoinst*/
 			.class6(class6[15:0]),
 			.class7(class7[15:0]),
 			.class8(class8[15:0]),
-			.class9(class9[15:0]));
+			.class9(class9[15:0]),
+			.get_class_start(get_class_start));
 //CLK assignment
 assign clk = sys_clk;
 assign wclk = bd_clk; 
@@ -2432,6 +2436,7 @@ assign pool2_start = conv2_done;
 assign fc1_start   = pool2_done;
 assign fc2_start   = fc1_done;
 assign fc3_start   = fc2_done;
-assign done        = fc3_done;
+assign get_class_start  = fc3_done;
+assign done 	   = get_class_done;
 assign sel 		   = sel_r;
 endmodule

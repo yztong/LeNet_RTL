@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : get_class.v
 //  Created On    : 2018-01-23 09:28:48
-//  Last Modified : 2018-01-23 13:32:58
+//  Last Modified : 2018-01-23 23:11:03
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -13,6 +13,7 @@
 //==================================================================================================
 module get_class(/*autoport*/
 //output
+			get_class_done,
 			class_value,
 			class_index,
 //input
@@ -26,7 +27,8 @@ module get_class(/*autoport*/
 			class6,
 			class7,
 			class8,
-			class9);
+			class9,
+			get_class_start);
 
 input clk;
 
@@ -41,6 +43,8 @@ input [15:0]  class7;
 input [15:0]  class8;
 input [15:0]  class9;		
 
+input get_class_start;
+output get_class_done;
 output [15:0] class_value;
 output [3:0]  class_index;
 
@@ -162,8 +166,21 @@ always@(posedge clk)begin
 	value_s4_0_r <= value_s4_0;
 	index_s4_0_r <= index_s4_0;
 end
+
+//---------------------------------
+//Register Done Signal
+//---------------------------------
+reg done_r1,done_r2,done_r3,done_r4;
+always@(posedge clk)begin
+	done_r1 <= get_class_start;
+	done_r2 <= done_r1;
+	done_r3 <= done_r2;
+	done_r4 <= done_r3;
+
+end
 //output to external
 assign class_value = value_s4_0_r;
 assign class_index = index_s4_0_r;
+assign get_class_done = done_r4;
 
 endmodule

@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : top_sim.v
 //  Created On    : 2018-01-14 14:04:33
-//  Last Modified : 2018-01-23 12:39:26
+//  Last Modified : 2018-01-23 23:39:23
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -16,6 +16,10 @@ module top_sim();
 reg sys_clk;
 reg rst_n;
 reg start;
+reg bd_clk;
+reg [3:0] f1_wr_en;
+reg [31:0] f1_waddr;
+reg [31:0] f1_wdata;
 wire done;
 wire [15:0] class_value;
 wire [3:0]  class_index;
@@ -26,10 +30,18 @@ top top(/*autoinst*/
 			.class_index(class_index[3:0]),
 			.sys_clk(sys_clk),
 			.rst_n(rst_n),
-			.start(start));
+			.bd_clk(bd_clk),
+			.start(start),
+			.f1_wr_en(f1_wr_en[3:0]),
+			.f1_waddr(f1_waddr[31:0]),
+			.f1_wdata(f1_wdata[31:0]));
 
 integer i;
 initial begin
+bd_clk =0;
+f1_wr_en = 0;
+f1_waddr =0;
+f1_wdata = 0;
 start =0;
 sys_clk =0;
 rst_n = 0;
