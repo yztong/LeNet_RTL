@@ -106,7 +106,7 @@ assign value_s2_0 = value_0_1_r > value_2_3_r? value_0_1_r:value_2_3_r;
 assign value_s2_1 = value_4_5_r > value_6_7_r? value_4_5_r:value_6_7_r;
 assign value_s2_2 = value_8_9_r;
 
-assign index_s2_0 = value_0_1_r > value_2_3_r? index_0_1_r:index_2_3_r
+assign index_s2_0 = value_0_1_r > value_2_3_r? index_0_1_r:index_2_3_r;
 assign index_s2_1 = value_4_5_r > value_6_7_r? index_4_5_r:index_6_7_r;
 assign index_s2_2 = index_8_9;
 

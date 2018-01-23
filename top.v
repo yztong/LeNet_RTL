@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : top.v
 //  Created On    : 2018-01-09 13:02:33
-//  Last Modified : 2018-01-22 14:07:51
+//  Last Modified : 2018-01-23 10:03:56
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -15,16 +15,8 @@
 module top(/*autoport*/
 //output
 			done,
-			C0,
-			C1,
-			C2,
-			C3,
-			C4,
-			C5,
-			C6,
-			C7,
-			C8,
-			C9,
+			class_value,
+			class_index,
 //input
 			sys_clk,
 			rst_n,
@@ -33,16 +25,9 @@ input sys_clk;
 input rst_n;
 input start;
 output done;
-output [7:0] C0;
-output [7:0] C1;
-output [7:0] C2;
-output [7:0] C3;
-output [7:0] C4;
-output [7:0] C5;
-output [7:0] C6;
-output [7:0] C7;
-output [7:0] C8;
-output [7:0] C9;
+output [15:0] class_value;
+output [3:0]  class_index;
+
 
 
 /*autodef*/
@@ -3151,6 +3136,21 @@ shared_mac_bank shared_mac_bank(/*autoinst*/
 			.fc2_clr(fc2_clr),
 			.fc3_clr(fc3_clr));
 
+get_class	get_class(/*autoinst*/
+			.class_value(class_value[15:0]),
+			.class_index(class_index[3:0]),
+			.clk(clk),
+			.class0(class0[15:0]),
+			.class1(class1[15:0]),
+			.class2(class2[15:0]),
+			.class3(class3[15:0]),
+			.class4(class4[15:0]),
+			.class5(class5[15:0]),
+			.class6(class6[15:0]),
+			.class7(class7[15:0]),
+			.class8(class8[15:0]),
+			.class9(class9[15:0]));
+
   clk_wiz_0 clk_wiz_0
  (
   // Clock out ports
@@ -3169,16 +3169,7 @@ always@(posedge clk or negedge rst_n)begin
 		sel_r <= 1'b0;
 	end
 end
-assign C0 = class0[7:0];
-assign C1 = class1[7:0];
-assign C2 = class2[7:0];
-assign C3 = class3[7:0];
-assign C4 = class4[7:0];
-assign C5 = class5[7:0];
-assign C6 = class6[7:0];
-assign C7 = class7[7:0];
-assign C8 = class8[7:0];
-assign C9 = class9[7:0];
+
 
 assign conv1_start = start;
 assign pool1_start = conv1_done;
