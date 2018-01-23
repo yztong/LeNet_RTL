@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : get_class.v
 //  Created On    : 2018-01-23 09:28:48
-//  Last Modified : 2018-01-23 09:59:38
+//  Last Modified : 2018-01-23 13:34:14
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -39,7 +39,7 @@ input [15:0]  class5;
 input [15:0]  class6;
 input [15:0]  class7;
 input [15:0]  class8;
-input [15:0]  class9;
+input [15:0]  class9;	
 
 output [15:0] class_value;
 output [3:0]  class_index;
@@ -130,22 +130,40 @@ wire [15:0] value_s3_0,value_s3_1;
 wire [3:0] index_s3_0,index_s3_1;
 
 assign value_s3_0 = value_s2_0_r > value_s2_1_r? value_s2_0_r:value_s2_1_r;
-assign value_s3_1 = value_s2_2_r > value_s3_0? value_s2_2_r:value_s3_0;
+assign value_s3_1 = value_s2_2_r;
 
 assign index_s3_0 = value_s2_0_r > value_s2_1_r? index_s2_0_r:index_s2_1_r;
-assign index_s3_1 = value_s2_2_r > value_s3_0? index_s2_2_r:index_s3_0;
+assign index_s3_1 = value_s2_2_r;
 
-
-reg [15:0] value_s3_1_r;
-reg [3:0]  index_s3_1_r;
+reg [15:0] value_s3_0_r,value_s3_1_r;
+reg [3:0]  index_s3_0_r,index_s3_1_r;
 
 always@(posedge clk)begin
+	value_s3_0_r <= value_s3_0;
 	value_s3_1_r <= value_s3_1;
+	index_s3_0_r <= index_s3_0;
 	index_s3_1_r <= index_s3_1;
 end
 
+//--------------------------------- 
+//Stage 4: Compare
+//---------------------------------
+wire [15:0] value_s4_0;
+wire [3:0] index_s4_0;
+
+assign value_s4_0 = value_s3_0_r > value_s3_1_r? value_s3_0_r:value_s3_1_r;
+assign index_s4_0 = value_s3_0_r > value_s3_1_r? index_s3_0_r:index_s3_1_r;
+
+
+reg [15:0] value_s4_0_r;
+reg [3:0]  index_s4_0_r;
+
+always@(posedge clk)begin
+	value_s4_0_r <= value_s4_0;
+	index_s4_0_r <= index_s4_0;
+end
 //output to external
-assign class_value = value_s3_1_r;
-assign class_index = index_s3_1_r;
+assign class_value = value_s4_0_r;
+assign class_index = index_s4_0_r;
 
 endmodule
