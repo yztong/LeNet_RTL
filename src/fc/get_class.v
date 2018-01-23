@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : get_class.v
 //  Created On    : 2018-01-23 09:28:48
-//  Last Modified : 2018-01-23 13:34:14
+//  Last Modified : 2018-01-23 14:56:17
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -108,7 +108,7 @@ assign value_s2_2 = value_8_9_r;
 
 assign index_s2_0 = value_0_1_r > value_2_3_r? index_0_1_r:index_2_3_r;
 assign index_s2_1 = value_4_5_r > value_6_7_r? index_4_5_r:index_6_7_r;
-assign index_s2_2 = index_8_9;
+assign index_s2_2 = index_8_9_r;
 
 reg [15:0]value_s2_0_r,value_s2_1_r,value_s2_2_r;
 reg [3:0] index_s2_0_r,index_s2_1_r,index_s2_2_r;
