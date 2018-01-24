@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : f1_rom.v
 //  Created On    : 2017-12-29 19:14:58
-//  Last Modified : 2018-01-24 11:06:39
+//  Last Modified : 2018-01-23 20:25:53
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -40,7 +40,7 @@ blk_mem_gen_f1_ram f1_ram (
   .addra(f1_waddr),  // input wire [31 : 0] addra
   .dina(f1_wdata),    // input wire [31 : 0] dina
   .clkb(rclk),    // input wire clkb
-  .addrb({2'b0,f1_raddr,2'b0}),  // input wire [31 : 0] addrb
+  .addrb({20'b0,f1_raddr,2'b0}),  // input wire [31 : 0] addrb
   .doutb(f1_rdata)  // output wire [31 : 0] doutb
 );
 
