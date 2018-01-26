@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : w7_rom.v
 //  Created On    : 2018-01-08 12:17:27
-//  Last Modified : 2018-01-08 12:20:02
+//  Last Modified : 2018-01-26 16:05:45
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -29,67 +29,32 @@ module w7_rom(/*autoport*/
 	input		 clk;
 	input  [6:0] w7_raddr;
 
-    output [7:0] w7_1_rdata;
-    output [7:0] w7_2_rdata;
-    output [7:0] w7_3_rdata;
-    output [7:0] w7_4_rdata;
-    output [7:0] w7_5_rdata;
-    output [7:0] w7_6_rdata;
-    output [7:0] w7_7_rdata;
-    output [7:0] w7_8_rdata;
-    output [7:0] w7_9_rdata;
-    output [7:0] w7_10_rdata;
+  output [7:0] w7_1_rdata;
+  output [7:0] w7_2_rdata;
+  output [7:0] w7_3_rdata;
+  output [7:0] w7_4_rdata;
+  output [7:0] w7_5_rdata;
+  output [7:0] w7_6_rdata;
+  output [7:0] w7_7_rdata;
+  output [7:0] w7_8_rdata;
+  output [7:0] w7_9_rdata;
+  output [7:0] w7_10_rdata;
 
-
-    blk_mem_gen_w7_1_rom w7_1 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_1_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_2_rom w7_2 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_2_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_3_rom w7_3 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_3_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_4_rom w7_4 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_4_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_5_rom w7_5 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_5_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_6_rom w7_6 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_6_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_7_rom w7_7 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_7_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_8_rom w7_8 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_8_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_9_rom w7_9 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_9_rdata)  // output wire [7 : 0] douta
-);
-blk_mem_gen_w7_10_rom w7_10 (
-  .clka(clk),    // input wire clka
-  .addra(w7_raddr),  // input wire [6 : 0] addra
-  .douta(w7_10_rdata)  // output wire [7 : 0] douta
-);
+  wire [79:0] w7_rdata;
+  blk_mem_gen_w7_rom your_instance_name (
+    .clka(clka),    // input wire clka
+    .addra(addra),  // input wire [6 : 0] addra
+    .douta(douta)  // output wire [79 : 0] douta
+  );
+  assign w7_1_rdata = w7_rdata[7:0];
+  assign w7_2_rdata = w7_rdata[15:8];
+  assign w7_3_rdata = w7_rdata[23:16];
+  assign w7_4_rdata = w7_rdata[31:24];
+  assign w7_5_rdata = w7_rdata[39:32];
+  assign w7_6_rdata = w7_rdata[47:40];
+  assign w7_7_rdata = w7_rdata[55:48];
+  assign w7_8_rdata = w7_rdata[63:56];
+  assign w7_9_rdata = w7_rdata[71:64];
+  assign w7_10_rdata = w7_rdata[79:72];
 
 endmodule
