@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : w7_rom.v
 //  Created On    : 2018-01-08 12:17:27
-//  Last Modified : 2018-01-26 16:05:45
+//  Last Modified : 2018-01-26 16:07:16
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -42,9 +42,9 @@ module w7_rom(/*autoport*/
 
   wire [79:0] w7_rdata;
   blk_mem_gen_w7_rom your_instance_name (
-    .clka(clka),    // input wire clka
-    .addra(addra),  // input wire [6 : 0] addra
-    .douta(douta)  // output wire [79 : 0] douta
+    .clka(clk),    // input wire clka
+    .addra(w7_raddr),  // input wire [6 : 0] addra
+    .douta(w7_rdata)  // output wire [79 : 0] douta
   );
   assign w7_1_rdata = w7_rdata[7:0];
   assign w7_2_rdata = w7_rdata[15:8];

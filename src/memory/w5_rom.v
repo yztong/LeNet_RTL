@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : w5_rom.v
 //  Created On    : 2018-01-07 22:27:49
-//  Last Modified : 2018-01-26 16:01:52
+//  Last Modified : 2018-01-26 16:06:34
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -262,7 +262,7 @@ module w5_rom(/*autoport*/
 
 
   wire [959:0] w5_rdata;
-  blk_mem_gen_w5_rom your_instance_name (
+  blk_mem_gen_w5_rom w5_rom (
     .clka(clk),    // input wire clka
     .addra(w5_raddr),  // input wire [8 : 0] addra
     .douta(w5_rdata)  // output wire [959 : 0] douta
