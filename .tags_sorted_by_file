@@ -79,6 +79,41 @@ np	script\python\test.py	/^import numpy as np$/;"	i
 w3	script\python\test.py	/^w3 = np.around(w3).astype(np.int16)$/;"	v
 w3	script\python\test.py	/^w3 = np.load('..\/..\/data\/7.npy')$/;"	v
 w3	script\python\test.py	/^w3 = w3*128*128$/;"	v
+c	script\python\w1_get.py	/^c = radixConvert()$/;"	v
+np	script\python\w1_get.py	/^import numpy as np$/;"	i
+radixConvert	script\python\w1_get.py	/^from radix import radixConvert$/;"	i
+w1	script\python\w1_get.py	/^w1 = np.around(w1).astype(np.int8)$/;"	v
+w1	script\python\w1_get.py	/^w1 = np.load('..\/..\/data\/0.npy')$/;"	v
+w1	script\python\w1_get.py	/^w1 = w1*128$/;"	v
+weight_file	script\python\w1_get.py	/^weight_file = open('w1.coe', 'w')$/;"	v
+c	script\python\w3_get.py	/^c = radixConvert()$/;"	v
+np	script\python\w3_get.py	/^import numpy as np$/;"	i
+radixConvert	script\python\w3_get.py	/^from radix import radixConvert$/;"	i
+w3	script\python\w3_get.py	/^w3 = np.around(w3).astype(np.int8)$/;"	v
+w3	script\python\w3_get.py	/^w3 = np.load('..\/..\/data\/2.npy')$/;"	v
+w3	script\python\w3_get.py	/^w3 = w3*128$/;"	v
+weight_file	script\python\w3_get.py	/^weight_file = open('w3.coe', 'w')$/;"	v
+c	script\python\w5_get.py	/^c = radixConvert()$/;"	v
+np	script\python\w5_get.py	/^import numpy as np$/;"	i
+radixConvert	script\python\w5_get.py	/^from radix import radixConvert$/;"	i
+w5	script\python\w5_get.py	/^w5 = np.around(w5).astype(np.int8)$/;"	v
+w5	script\python\w5_get.py	/^w5 = np.load('..\/..\/data\/4.npy')$/;"	v
+w5	script\python\w5_get.py	/^w5 = w5*128$/;"	v
+weight_file	script\python\w5_get.py	/^weight_file = open('w5.coe', 'w')$/;"	v
+c	script\python\w6_get.py	/^c = radixConvert()$/;"	v
+np	script\python\w6_get.py	/^import numpy as np$/;"	i
+radixConvert	script\python\w6_get.py	/^from radix import radixConvert$/;"	i
+w6	script\python\w6_get.py	/^w6 = np.around(w6).astype(np.int8)$/;"	v
+w6	script\python\w6_get.py	/^w6 = np.load('..\/..\/data\/6.npy')$/;"	v
+w6	script\python\w6_get.py	/^w6 = w6*128$/;"	v
+weight_file	script\python\w6_get.py	/^weight_file = open('w6.coe', 'w')$/;"	v
+c	script\python\w7_get.py	/^c = radixConvert()$/;"	v
+np	script\python\w7_get.py	/^import numpy as np$/;"	i
+radixConvert	script\python\w7_get.py	/^from radix import radixConvert$/;"	i
+w7	script\python\w7_get.py	/^w7 = np.around(w7).astype(np.int8)$/;"	v
+w7	script\python\w7_get.py	/^w7 = np.load('..\/..\/data\/8.npy')$/;"	v
+w7	script\python\w7_get.py	/^w7 = w7*128$/;"	v
+weight_file	script\python\w7_get.py	/^weight_file = open('w7.coe', 'w')$/;"	v
 bd_clk	simulation\behav\top_sim.v	/^reg bd_clk;$/;"	r
 class_index	simulation\behav\top_sim.v	/^wire [3:0]  class_index;$/;"	n
 class_value	simulation\behav\top_sim.v	/^wire [15:0] class_value;$/;"	n
@@ -2116,6 +2151,8 @@ wire	src\memory\f1_ram.v	/^input wire [9:0]   f1_raddr;$/;"	p
 wire	src\memory\f1_ram.v	/^output wire [7:0]  f1_rdata; $/;"	p
 clk	src\memory\f2_ram.v	/^	input clk;$/;"	p
 f2_ram	src\memory\f2_ram.v	/^module f2_ram(\/*autoport*\/$/;"	m
+f2_rdata	src\memory\f2_ram.v	/^	wire [95:0] f2_wdata,f2_rdata;$/;"	n
+f2_wdata	src\memory\f2_ram.v	/^	wire [95:0] f2_wdata,f2_rdata;$/;"	n
 wire	src\memory\f2_ram.v	/^	input wire 		  f2_wr_en;$/;"	p
 wire	src\memory\f2_ram.v	/^	input wire [15:0] f2_1_wdata;$/;"	p
 wire	src\memory\f2_ram.v	/^	input wire [15:0] f2_2_wdata;$/;"	p
@@ -2133,6 +2170,8 @@ wire	src\memory\f2_ram.v	/^	output wire[15:0] f2_5_rdata;$/;"	p
 wire	src\memory\f2_ram.v	/^	output wire[15:0] f2_6_rdata;$/;"	p
 clk	src\memory\f3_ram.v	/^	input clk;$/;"	p
 f3_ram	src\memory\f3_ram.v	/^module f3_ram(\/*autoport*\/$/;"	m
+f3_rdata	src\memory\f3_ram.v	/^	wire[95:0] f3_wdata,f3_rdata;$/;"	n
+f3_wdata	src\memory\f3_ram.v	/^	wire[95:0] f3_wdata,f3_rdata;$/;"	n
 wire	src\memory\f3_ram.v	/^	input wire 		  f3_wr_en;$/;"	p
 wire	src\memory\f3_ram.v	/^	input wire [15:0] f3_1_wdata;$/;"	p
 wire	src\memory\f3_ram.v	/^	input wire [15:0] f3_2_wdata;$/;"	p
@@ -2150,6 +2189,8 @@ wire	src\memory\f3_ram.v	/^	output wire[15:0] f3_5_rdata;$/;"	p
 wire	src\memory\f3_ram.v	/^	output wire[15:0] f3_6_rdata;$/;"	p
 clk	src\memory\f4_ram.v	/^	input clk;$/;"	p
 f4_ram	src\memory\f4_ram.v	/^module f4_ram(\/*autoport*\/$/;"	m
+f4_rdata	src\memory\f4_ram.v	/^	wire[255:0] f4_wdata,f4_rdata;$/;"	n
+f4_wdata	src\memory\f4_ram.v	/^	wire[255:0] f4_wdata,f4_rdata;$/;"	n
 wire	src\memory\f4_ram.v	/^	input wire 		  f4_wr_en;$/;"	p
 wire	src\memory\f4_ram.v	/^	input wire [15:0] f4_10_wdata;$/;"	p
 wire	src\memory\f4_ram.v	/^	input wire [15:0] f4_11_wdata;$/;"	p
@@ -2185,26 +2226,28 @@ wire	src\memory\f4_ram.v	/^	output wire[15:0] f4_6_rdata;$/;"	p
 wire	src\memory\f4_ram.v	/^	output wire[15:0] f4_7_rdata;$/;"	p
 wire	src\memory\f4_ram.v	/^	output wire[15:0] f4_8_rdata;$/;"	p
 wire	src\memory\f4_ram.v	/^	output wire[15:0] f4_9_rdata;$/;"	p
-f5_10_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_10_rdata;$/;"	n
-f5_11_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_11_rdata;$/;"	n
-f5_12_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_12_rdata;$/;"	n
-f5_13_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_13_rdata;$/;"	n
-f5_14_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_14_rdata;$/;"	n
-f5_15_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_15_rdata;$/;"	n
-f5_16_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_16_rdata;$/;"	n
-f5_1_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_1_rdata;$/;"	n
-f5_2_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_2_rdata;$/;"	n
-f5_3_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_3_rdata;$/;"	n
-f5_4_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_4_rdata;$/;"	n
-f5_5_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_5_rdata;$/;"	n
-f5_6_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_6_rdata;$/;"	n
-f5_7_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_7_rdata;$/;"	n
-f5_8_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_8_rdata;$/;"	n
-f5_9_rdata	src\memory\f5_ram.v	/^wire [15:0] f5_9_rdata;$/;"	n
+f5_10_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_10_rdata;$/;"	n
+f5_11_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_11_rdata;$/;"	n
+f5_12_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_12_rdata;$/;"	n
+f5_13_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_13_rdata;$/;"	n
+f5_14_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_14_rdata;$/;"	n
+f5_15_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_15_rdata;$/;"	n
+f5_16_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_16_rdata;$/;"	n
+f5_1_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_1_rdata;$/;"	n
+f5_2_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_2_rdata;$/;"	n
+f5_3_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_3_rdata;$/;"	n
+f5_4_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_4_rdata;$/;"	n
+f5_5_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_5_rdata;$/;"	n
+f5_6_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_6_rdata;$/;"	n
+f5_7_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_7_rdata;$/;"	n
+f5_8_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_8_rdata;$/;"	n
+f5_9_rdata	src\memory\f5_ram.v	/^  wire [15:0] f5_9_rdata;$/;"	n
 f5_ram	src\memory\f5_ram.v	/^module f5_ram(\/*autoport*\/$/;"	m
-f5_rdata_temp	src\memory\f5_ram.v	/^reg[15:0] f5_rdata_temp;$/;"	r
-f5_sel_r1	src\memory\f5_ram.v	/^reg[3:0] f5_sel_r1,f5_sel_r2;$/;"	r
-f5_sel_r2	src\memory\f5_ram.v	/^reg[3:0] f5_sel_r1,f5_sel_r2;$/;"	r
+f5_rdata_all	src\memory\f5_ram.v	/^  wire [255:0] f5_wdata,f5_rdata_all;$/;"	n
+f5_rdata_temp	src\memory\f5_ram.v	/^  reg[15:0] f5_rdata_temp;$/;"	r
+f5_sel_r1	src\memory\f5_ram.v	/^  reg[3:0] f5_sel_r1,f5_sel_r2;$/;"	r
+f5_sel_r2	src\memory\f5_ram.v	/^  reg[3:0] f5_sel_r1,f5_sel_r2;$/;"	r
+f5_wdata	src\memory\f5_ram.v	/^  wire [255:0] f5_wdata,f5_rdata_all;$/;"	n
 wire	src\memory\f5_ram.v	/^	input wire        f5_wr_en;$/;"	p
 wire	src\memory\f5_ram.v	/^	input wire  [15:0] 	 f5_10_wdata;$/;"	p
 wire	src\memory\f5_ram.v	/^	input wire  [15:0] 	 f5_11_wdata;$/;"	p
@@ -2227,6 +2270,7 @@ wire	src\memory\f5_ram.v	/^	input wire [4:0]  f5_raddr;$/;"	p
 wire	src\memory\f5_ram.v	/^	input wire [4:0]  f5_waddr;$/;"	p
 wire	src\memory\f5_ram.v	/^	input wire clk;$/;"	p
 wire	src\memory\f5_ram.v	/^	output wire [15:0] f5_rdata;$/;"	p
+w1_rdata	src\memory\w1_rom.v	/^  wire [47:0] w1_rdata;$/;"	n
 w1_rom	src\memory\w1_rom.v	/^module w1_rom(\/*autoport*\/$/;"	m
 wire	src\memory\w1_rom.v	/^	input wire  [4:0] w1_raddr;$/;"	p
 wire	src\memory\w1_rom.v	/^	input wire clk;$/;"	p
@@ -2238,6 +2282,7 @@ wire	src\memory\w1_rom.v	/^	output wire [7:0] w1_5_rdata;$/;"	p
 wire	src\memory\w1_rom.v	/^	output wire [7:0] w1_6_rdata;$/;"	p
 clk	src\memory\w3_rom.v	/^	input clk;$/;"	p
 w3_raddr	src\memory\w3_rom.v	/^	input [4:0] w3_raddr;$/;"	p
+w3_rdata	src\memory\w3_rom.v	/^	wire [767:0] w3_rdata;$/;"	n
 w3_rom	src\memory\w3_rom.v	/^module w3_rom(\/*autoport*\/$/;"	m
 wire	src\memory\w3_rom.v	/^	output wire [7:0] 	w3_10_1_rdata;	$/;"	p
 wire	src\memory\w3_rom.v	/^	output wire [7:0] 	w3_10_2_rdata;	$/;"	p
@@ -2457,6 +2502,7 @@ w5_98_rdata	src\memory\w5_rom.v	/^	output[7:0] w5_98_rdata;$/;"	p
 w5_99_rdata	src\memory\w5_rom.v	/^	output[7:0] w5_99_rdata;$/;"	p
 w5_9_rdata	src\memory\w5_rom.v	/^	output[7:0] w5_9_rdata;$/;"	p
 w5_raddr	src\memory\w5_rom.v	/^	input [8:0] w5_raddr;$/;"	p
+w5_rdata	src\memory\w5_rom.v	/^  wire [959:0] w5_rdata;$/;"	n
 w5_rom	src\memory\w5_rom.v	/^module w5_rom(\/*autoport*\/$/;"	m
 clk	src\memory\w6_rom.v	/^	  input		 clk;$/;"	p
 w6_10_rdata	src\memory\w6_rom.v	/^    output [7:0] w6_10_rdata;$/;"	p
@@ -2544,19 +2590,21 @@ w6_84_rdata	src\memory\w6_rom.v	/^    output [7:0] w6_84_rdata;$/;"	p
 w6_8_rdata	src\memory\w6_rom.v	/^    output [7:0] w6_8_rdata;$/;"	p
 w6_9_rdata	src\memory\w6_rom.v	/^    output [7:0] w6_9_rdata;$/;"	p
 w6_raddr	src\memory\w6_rom.v	/^	  input  [6:0] w6_raddr;$/;"	p
+w6_rdata	src\memory\w6_rom.v	/^  wire [671:0] w6_rdata;  $/;"	n
 w6_rom	src\memory\w6_rom.v	/^module w6_rom(\/*autoport*\/$/;"	m
 clk	src\memory\w7_rom.v	/^	input		 clk;$/;"	p
-w7_10_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_10_rdata;$/;"	p
-w7_1_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_1_rdata;$/;"	p
-w7_2_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_2_rdata;$/;"	p
-w7_3_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_3_rdata;$/;"	p
-w7_4_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_4_rdata;$/;"	p
-w7_5_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_5_rdata;$/;"	p
-w7_6_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_6_rdata;$/;"	p
-w7_7_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_7_rdata;$/;"	p
-w7_8_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_8_rdata;$/;"	p
-w7_9_rdata	src\memory\w7_rom.v	/^    output [7:0] w7_9_rdata;$/;"	p
+w7_10_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_10_rdata;$/;"	p
+w7_1_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_1_rdata;$/;"	p
+w7_2_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_2_rdata;$/;"	p
+w7_3_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_3_rdata;$/;"	p
+w7_4_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_4_rdata;$/;"	p
+w7_5_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_5_rdata;$/;"	p
+w7_6_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_6_rdata;$/;"	p
+w7_7_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_7_rdata;$/;"	p
+w7_8_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_8_rdata;$/;"	p
+w7_9_rdata	src\memory\w7_rom.v	/^  output [7:0] w7_9_rdata;$/;"	p
 w7_raddr	src\memory\w7_rom.v	/^	input  [6:0] w7_raddr;$/;"	p
+w7_rdata	src\memory\w7_rom.v	/^  wire [79:0] w7_rdata;$/;"	n
 w7_rom	src\memory\w7_rom.v	/^module w7_rom(\/*autoport*\/$/;"	m
 IDLE2RUN_start	src\pool\pool1_ctrl.v	/^	wire IDLE2RUN_start,RUN2DONE_start;$/;"	n
 RUN2DONE_start	src\pool\pool1_ctrl.v	/^	wire IDLE2RUN_start,RUN2DONE_start;$/;"	n
@@ -3436,11 +3484,13 @@ GPIO_1_tri_i	src\top.v	/^wire [20:0]GPIO_1_tri_i;$/;"	n
 bd_clk	src\top.v	/^wire bd_clk;$/;"	n
 bram_addr_a_0	src\top.v	/^wire [14:0]bram_addr_a_0;$/;"	n
 bram_clk_a_0	src\top.v	/^wire bram_clk_a_0;$/;"	n
+bram_en_a_0	src\top.v	/^wire bram_en_a_0;$/;"	n
 bram_we_a_0	src\top.v	/^wire [3:0]bram_we_a_0;$/;"	n
 bram_wrdata_a_0	src\top.v	/^wire [31:0]bram_wrdata_a_0;$/;"	n
 class_index	src\top.v	/^wire [3:0]class_index;$/;"	n
 class_value	src\top.v	/^wire [15:0]class_value;$/;"	n
 done	src\top.v	/^wire done;$/;"	n
+ena	src\top.v	/^wire ena;$/;"	n
 f1_waddr	src\top.v	/^wire [31:0]f1_waddr;$/;"	n
 f1_wdata	src\top.v	/^wire [31:0]f1_wdata;$/;"	n
 f1_wr_en	src\top.v	/^wire [3:0]f1_wr_en;$/;"	n
