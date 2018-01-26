@@ -1,0 +1,6 @@
+	assign f2_1_rdata = f2_rdata[15:0];
+	assign f2_2_rdata = f2_rdata[31:16];
+	assign f2_3_rdata = f2_rdata[47:32];
+	assign f2_4_rdata = f2_rdata[63:48];
+	assign f2_5_rdata = f2_rdata[79:64];
+	assign f2_6_rdata = f2_rdata[95:80];
