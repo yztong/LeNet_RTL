@@ -1,10 +1,1 @@
-	assign w7_1_rdata = w7_rdata[7:0];
-	assign w7_2_rdata = w7_rdata[15:8];
-	assign w7_3_rdata = w7_rdata[23:16];
-	assign w7_4_rdata = w7_rdata[31:24];
-	assign w7_5_rdata = w7_rdata[39:32];
-	assign w7_6_rdata = w7_rdata[47:40];
-	assign w7_7_rdata = w7_rdata[55:48];
-	assign w7_8_rdata = w7_rdata[63:56];
-	assign w7_9_rdata = w7_rdata[71:64];
-	assign w7_10_rdata = w7_rdata[79:72];
+f5_16_wdata,f5_15_wdata,f5_14_wdata,f5_13_wdata,f5_12_wdata,f5_11_wdata,f5_10_wdata,f5_9_wdata,f5_8_wdata,f5_7_wdata,f5_6_wdata,f5_5_wdata,f5_4_wdata,f5_3_wdata,f5_2_wdata,f5_1_wdata,
