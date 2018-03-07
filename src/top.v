@@ -105,7 +105,7 @@ assign start=GPIO_0_tri_o;
 assign f1_wdata= bram_wrdata_a_0;
 assign sys_clk= FCLK_CLK1_0;
 assign f1_waddr=bram_addr_a_0;
-assign GPIO_1_tri_i={done,class_value,class_index};
+assign GPIO_1_tri_i={class_value,class_index,done};
 assign ena = bram_en_a_0;
 
 design_1_wrapper design_1_wrapper(/*autoinst*/
