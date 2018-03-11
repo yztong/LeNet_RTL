@@ -30,7 +30,7 @@ def image_get():
 
 def feature_get():
 
-    file = open('feature.h', 'w')
+    file = open('feature.c', 'w')
     file.write('u32 image[][]={\n')
 
     for i in range(10000):
@@ -53,17 +53,17 @@ def feature_get():
                     file.write(c.dec2Hexcmpmt('0', 8)+',')
                 else:
                     file.write(c.dec2Hexcmpmt(str(eval_image[x-2][y-2]), 8)+',')
-    file.write('}')
+    file.write('};')
 
 
 def label_get():
 
-    file = open('label.h', 'w')
+    file = open('label.c', 'w')
     file.write('u32 label[]={\n')
 
     for i in range(10000):
         file.write(str(eval_labels[i])+',\n')
-    file.write('}')
+    file.write('};')
 
 
 # image_get()
