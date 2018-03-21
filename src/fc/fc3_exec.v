@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : fc3_exec.v
 //  Created On    : 2018-01-06 14:59:59
-//  Last Modified : 2018-01-22 13:59:51
+//  Last Modified : 2018-03-21 18:33:38
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -29,31 +29,14 @@ module fc3_exec(/*autoport*/
 			clk,
 			rst_n,
 			f8_wr_en,
-			mac5_1,
-			mac5_2,
-			mac5_3,
-			mac5_4,
-			mac5_5,
-			mac5_6,
-			mac5_7,
-			mac5_8,
-			mac5_9,
-			mac5_10);
+			mac_5);
 
 input clk;
 input rst_n;
 
 input f8_wr_en;
-input [22:0] mac5_1;
-input [22:0] mac5_2;
-input [22:0] mac5_3;
-input [22:0] mac5_4;
-input [22:0] mac5_5;
-input [22:0] mac5_6;
-input [22:0] mac5_7;
-input [22:0] mac5_8;
-input [22:0] mac5_9;
-input [22:0] mac5_10;
+input [229:0]	mac_5;
+
 
 output [15:0]  class0;
 output [15:0]  class1;
@@ -97,20 +80,12 @@ generate
 			.d_in(fc3_d_in[i]),
 			.b_in(fc3_b_in[i]),
 			.wr_en(f8_wr_en));
+		assign fc3_d_in[i] = mac_5[i*23+22:i*23];
 	end
 endgenerate
 
 
-assign fc3_d_in[0] = mac5_1;
-assign fc3_d_in[1] = mac5_2;
-assign fc3_d_in[2] = mac5_3;
-assign fc3_d_in[3] = mac5_4;
-assign fc3_d_in[4] = mac5_5;
-assign fc3_d_in[5] = mac5_6;
-assign fc3_d_in[6] = mac5_7;
-assign fc3_d_in[7] = mac5_8;
-assign fc3_d_in[8] = mac5_9;
-assign fc3_d_in[9] = mac5_10;
+//Bias initial
 
 assign fc3_b_in[0] = b_1;
 assign fc3_b_in[1] = b_2;

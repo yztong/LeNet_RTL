@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : f5_ram.v
 //  Created On    : 2018-01-07 20:39:04
-//  Last Modified : 2018-03-21 15:10:20
+//  Last Modified : 2018-03-21 17:06:00
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -13,49 +13,20 @@
 //==================================================================================================
 module f5_ram(/*autoport*/
 //output
-			f5_rdata,
+      f5_rdata,
 //input
-			f5_1_wdata,
-			f5_2_wdata,
-			f5_3_wdata,
-			f5_4_wdata,
-			f5_5_wdata,
-			f5_6_wdata,
-			f5_7_wdata,
-			f5_8_wdata,
-			f5_9_wdata,
-			f5_10_wdata,
-			f5_11_wdata,
-			f5_12_wdata,
-			f5_13_wdata,
-			f5_14_wdata,
-			f5_15_wdata,
-			f5_16_wdata,
-			clk,
-			f5_waddr,
-			f5_wr_en,
-			f5_sel,
-			f5_raddr);
+      clk,
+      f5_waddr,
+      f5_wdata,
+      f5_wr_en,
+      f5_sel,
+      f5_raddr);
 
-	input  [15:0] 	 f5_1_wdata; 
-	input  [15:0] 	 f5_2_wdata; 
-	input  [15:0] 	 f5_3_wdata; 
-	input  [15:0] 	 f5_4_wdata; 
-	input  [15:0] 	 f5_5_wdata; 
-	input  [15:0] 	 f5_6_wdata; 
-	input  [15:0] 	 f5_7_wdata;
-	input  [15:0] 	 f5_8_wdata;
-	input  [15:0] 	 f5_9_wdata;
-	input  [15:0] 	 f5_10_wdata;
-	input  [15:0] 	 f5_11_wdata;
-	input  [15:0] 	 f5_12_wdata;
-	input  [15:0] 	 f5_13_wdata;
-	input  [15:0] 	 f5_14_wdata;
-	input  [15:0] 	 f5_15_wdata;
-	input  [15:0] 	 f5_16_wdata;
+  
 
 	input clk;
 	input [4:0]  f5_waddr;
+  input [255:0]f5_wdata;
 	input        f5_wr_en;
 	input [3:0]  f5_sel;
 	input [4:0]  f5_raddr;
@@ -80,7 +51,7 @@ module f5_ram(/*autoport*/
   wire [15:0] f5_15_rdata;
   wire [15:0] f5_16_rdata;
 
-  wire [255:0] f5_wdata,f5_rdata_all;
+  wire [255:0] f5_rdata_all;
   dist_mem_gen_f5_ram f5_ram (
     .a(f5_waddr),        // input [4 : 0] a
     .d(f5_wdata),        // input [255 : 0] d
@@ -90,9 +61,7 @@ module f5_ram(/*autoport*/
     .qdpo(f5_rdata_all)  // output [255 : 0] qdpo
   );
 
-assign f5_wdata = {f5_16_wdata,f5_15_wdata,f5_14_wdata,f5_13_wdata,f5_12_wdata,f5_11_wdata,
-                    f5_10_wdata,f5_9_wdata,f5_8_wdata,f5_7_wdata,f5_6_wdata,
-                    f5_5_wdata,f5_4_wdata,f5_3_wdata,f5_2_wdata,f5_1_wdata};
+
   assign f5_1_rdata = f5_rdata_all[15:0];
   assign f5_2_rdata = f5_rdata_all[31:16];
   assign f5_3_rdata = f5_rdata_all[47:32];
