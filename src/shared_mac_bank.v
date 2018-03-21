@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : shared_mac_bank.v
 //  Created On    : 2017-12-29 19:17:28
-//  Last Modified : 2018-03-21 16:58:06
+//  Last Modified : 2018-03-21 18:52:49
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -37,7 +37,7 @@ module shared_mac_bank(/*autoport*/
 			fc2_clr,
 			fc3_clr);
 
-	input wire clk;
+	input  clk;
 
 
 	//mac1 input
@@ -87,8 +87,8 @@ wire	    SEL[213:0];
 
 
 generate
-	genvar i,j,k,l,m,n;
-	for(i=1;i<215;i=i+1) begin:mac_gen
+	genvar i,j,k,l,m,n,x;
+	for(i=0;i<214;i=i+1) begin:mac_gen
 
 	MAC mac (
   		.CLK(clk),      // input wire CLK
@@ -104,12 +104,13 @@ generate
 			assign SEL[j] = sel? conv2_clr:fc1_clr; 
 			assign A[j*6+x] = sel? f3_rdata[16*x+15:16*x] : f5_rdata;
 			assign B[j*6+x] = sel? w3_rdata[(j*6+x)*8+7:(j*6+x)*8] : w5_rdata[(j*6+x)*8+7:(j*6+x)*8];
+		end
 	end
 
 	for(k=96;k<102;k=k+1) begin:sel2
 		assign SEL[k] = sel? conv1_clr:fc1_clr;
 		assign A[k] = sel? {{8{f1_rdata[7]}},f1_rdata[7:0]} : f5_rdata;
-		assign B[K] = sel? w1_rdata[(k-96)*8+7:(k-96)*8] : w5_rdata[k*8+7:k*8];
+		assign B[k] = sel? w1_rdata[(k-96)*8+7:(k-96)*8] : w5_rdata[k*8+7:k*8];
 	end
 
 	for(l=102;l<120;l=l+1) begin:sel3
