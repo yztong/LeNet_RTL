@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : channel_adder.v
 //  Created On    : 2018-01-02 15:21:12
-//  Last Modified : 2018-01-22 13:56:53
+//  Last Modified : 2018-03-20 16:54:41
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Input Feature Channel Adder
 //
 //
 //==================================================================================================

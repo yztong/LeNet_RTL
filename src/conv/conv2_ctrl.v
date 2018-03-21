@@ -1,14 +1,14 @@
 //==================================================================================================
 //  Filename      : conv2_ctrl.v
 //  Created On    : 2017-12-29 18:49:46
-//  Last Modified : 2018-01-11 12:44:56
+//  Last Modified : 2018-03-21 10:24:26
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
-//
+//  Description   : Conv 2nd Layer Control Module.  Generate Read&Write Addr and Related Control 
+//					Signals.
 //
 //==================================================================================================
 
@@ -26,18 +26,20 @@ module conv2_ctrl(/*autoport*/
 			conv2_start);
 	input wire clk;
 	input wire rst_n;
-	input wire conv2_start;
 
 
+	//Input Weight and Feature Read Addr
 	output wire [4:0] w3_raddr;
 	output wire [7:0] f3_raddr;
 
-	//output to  ram
+	//Output Feature Write Addr and Write Enable
 	output wire [6:0] f4_waddr;
 	output wire       f4_wr_en;
-	output wire       conv2_done;
-	//for adder control
+
+	//Control Signal
+	input  wire       conv2_start;
 	output wire       conv2_clr;
+	output wire       conv2_done;
 
 	localparam	IDLE=3'b001;
 	localparam  RUN =3'b010;
@@ -58,7 +60,6 @@ module conv2_ctrl(/*autoport*/
 			current_state <= next_state;
 	end
 
-
 	always@(*) begin
 		case(current_state)
 			IDLE:begin
@@ -66,9 +67,7 @@ module conv2_ctrl(/*autoport*/
 					next_state = RUN;
 				else
 					next_state = IDLE;
-
 			end
-
 			RUN:begin
 				if(RUN2DONE_start)
 					next_state = DONE;
@@ -122,7 +121,7 @@ module conv2_ctrl(/*autoport*/
 	assign add_cnt1 = end_cnt0;
 	assign end_cnt1 = add_cnt1 && cnt1 == 5-1;
 
-//cnt2 column
+//cnt2:Feature column
 	always @(posedge clk or negedge rst_n) begin
 		if (!rst_n) begin
 			// reset
@@ -141,7 +140,7 @@ module conv2_ctrl(/*autoport*/
 	assign add_cnt2 = end_cnt1;
 	assign end_cnt2 = add_cnt2 && cnt2 == 10-1;
 
-//cnt3 row
+//cnt3:Feature row
 	always @(posedge clk or negedge rst_n) begin
 		if (!rst_n) begin
 			// reset
@@ -198,11 +197,8 @@ module conv2_ctrl(/*autoport*/
   	end
   	assign f4_waddr_temp = f4_waddr_s3;
 
-
-
-
 //--------------------------------------
-//----Control Signal Gen
+//----Control Signal Gen----------------
 //--------------------------------------
 	wire 	  conv2_clr_temp;
 	wire      f4_wr_en_temp;
@@ -212,83 +208,65 @@ module conv2_ctrl(/*autoport*/
 	assign conv2_done_temp = current_state==DONE? 1'b1:1'b0;
 	assign conv2_clr_temp = cnt0==0 && cnt1==0;
 
-
 //-----------------------------------------
-//--Registers Stage to Meet Correct Timing
+//--Registers Stage to Meet Correct Timing-
 //-----------------------------------------
 //10 cycles for f4_waddr_temp,
 //13 for f4_wr_en_temp,
 //13 for conv2_done_temp,
 //7 for conv2_clr_temp
-	reg [6:0] 	f4_waddr_r1,f4_waddr_r2,f4_waddr_r3,f4_waddr_r4,
-				f4_waddr_r5,f4_waddr_r6,f4_waddr_r7,f4_waddr_r8,
-				f4_waddr_r9,f4_waddr_r10;
-	reg 		f4_wr_en_r1,f4_wr_en_r2,f4_wr_en_r3,f4_wr_en_r4,
-				f4_wr_en_r5,f4_wr_en_r6,f4_wr_en_r7,f4_wr_en_r8,
-				f4_wr_en_r9,f4_wr_en_r10,f4_wr_en_r11,f4_wr_en_r12,
-				f4_wr_en_r13;
-	reg 		conv2_done_r1,conv2_done_r2,conv2_done_r3,conv2_done_r4,
-				conv2_done_r5,conv2_done_r6,conv2_done_r7,conv2_done_r8,
-				conv2_done_r9,conv2_done_r10,conv2_done_r11,conv2_done_r12,
-				conv2_done_r13;
-	reg 		conv2_clr_r1,conv2_clr_r2,conv2_clr_r3,conv2_clr_r4,
-				conv2_clr_r5;
-    (* max_fanout = 50 *)reg conv2_clr_r6;
-	always@(posedge clk)begin
-		f4_waddr_r1 <= f4_waddr_temp;         //addr2data delay2
-		f4_waddr_r2 <= f4_waddr_r1;      
-		f4_waddr_r3 <= f4_waddr_r2;      	  //mult delay 3
-		f4_waddr_r4 <= f4_waddr_r3;           //channel add delay 3
-		f4_waddr_r5 <= f4_waddr_r4;           
-		f4_waddr_r6 <= f4_waddr_r5;           //Bias delay1
-		f4_waddr_r7 <= f4_waddr_r6;		      //ReLU  delay1
-		f4_waddr_r8 <= f4_waddr_r7;
-		f4_waddr_r9 <= f4_waddr_r8;
-		f4_waddr_r10 <= f4_waddr_r9;
-
-		f4_wr_en_r1   <= f4_wr_en_temp;		   	
-		f4_wr_en_r2   <= f4_wr_en_r1;
-		f4_wr_en_r3   <= f4_wr_en_r2;
-		f4_wr_en_r4   <= f4_wr_en_r3;
-		f4_wr_en_r5   <= f4_wr_en_r4;
-		f4_wr_en_r6   <= f4_wr_en_r5;
-		f4_wr_en_r7   <= f4_wr_en_r6;
-		f4_wr_en_r8   <= f4_wr_en_r7;
-		f4_wr_en_r9   <= f4_wr_en_r8;
-		f4_wr_en_r10   <= f4_wr_en_r9;
-		f4_wr_en_r11   <= f4_wr_en_r10;
-		f4_wr_en_r12   <= f4_wr_en_r11;
-		f4_wr_en_r13   <= f4_wr_en_r12;
-
-		conv2_done_r1   <= conv2_done_temp;
-		conv2_done_r2   <= conv2_done_r1;
-		conv2_done_r3   <= conv2_done_r2;
-		conv2_done_r4   <= conv2_done_r3;
-		conv2_done_r5   <= conv2_done_r4;
-		conv2_done_r6   <= conv2_done_r5;
-		conv2_done_r7   <= conv2_done_r6;
-		conv2_done_r8   <= conv2_done_r7;
-		conv2_done_r9   <= conv2_done_r8;
-		conv2_done_r10   <= conv2_done_r9;
-		conv2_done_r11   <= conv2_done_r10;
-		conv2_done_r12   <= conv2_done_r11;
-		conv2_done_r13   <= conv2_done_r12;	
-
-		conv2_clr_r1 <= conv2_clr_temp;     // conv_clr should assert at 2nd cycle of mac, DSP include 1, so here is 3 + 2 + 2 - 1 
-		conv2_clr_r2 <= conv2_clr_r1;
-		conv2_clr_r3 <= conv2_clr_r2;
-		conv2_clr_r4 <= conv2_clr_r3;
-		conv2_clr_r5 <= conv2_clr_r4;
-		conv2_clr_r6 <= conv2_clr_r5;
-
+	reg [6:0]   f4_waddr_reg[10:0];
+	reg  		f4_wr_en_reg[13:0];
+	reg  	    conv2_done_reg[13:0];
+	reg  		conv2_clr_reg[6:0];
+	always@*begin
+		 f4_waddr_reg[0] = f4_waddr_temp;
+		 f4_wr_en_reg[0] = f4_wr_en_temp;
+		 conv2_clr_reg[0] = conv2_clr_temp;
+		 conv2_done_reg[0] = conv2_done_temp;
 	end
-
+	generate
+		genvar i,j,k;
+		for (i = 0; i < 10; i = i + 1)
+		begin:reg_gen1
+		//addr2data delay 2
+		//mult delay 3
+		//channel adder delay 3
+		//Bias delay 1
+		//ReLU  delay 1
+			always@(posedge clk)begin
+				f4_waddr_reg[i+1] <= f4_waddr_reg[i];
+			end
+		end
+		for (j = 0; j < 13; j = j + 1)
+		begin:reg_gen2
+		//f1_raddr delay 3
+		//addr2data delay 2
+		//mult delay 3
+		//channel adder delay 3
+		//Bias delay 1
+		//ReLU  delay 1
+			always@(posedge clk)begin
+				f4_wr_en_reg[j+1] <= f4_wr_en_reg[j];
+				conv2_done_reg[j+1] <= conv2_done_reg[j];
+			end
+		end
+		for (k = 0; k < 6; k = k + 1)
+		begin:reg_gen3
+		//conv_clr should assert at 2nd cycle of mac, DSP include 1, so here is 3 + 2 + 2 - 1
+			always@(posedge clk)begin
+				conv2_clr_reg[k+1] <= conv2_clr_reg[k];
+			end
+		end		
+	endgenerate
+	
+    //(* max_fanout = 50 *)reg conv2_clr_r6;
 
 //output to external
-	assign f4_waddr 	= f4_waddr_r10;
-	assign f4_wr_en  = f4_wr_en_r13;
-	assign conv2_done   = conv2_done_r13;
-	assign conv2_clr    = conv2_clr_r6;
+	assign f4_waddr 	= f4_waddr_reg[10];
+	assign f4_wr_en  = f4_wr_en_reg[13];
+	assign conv2_done   = conv2_done_reg[13];
+	assign conv2_clr    = conv2_clr_reg[6];
 	
 endmodule 
 

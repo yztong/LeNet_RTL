@@ -1,14 +1,14 @@
 //==================================================================================================
 //  Filename      : pool1_ctrl.v
 //  Created On    : 2017-12-28 14:23:21
-//  Last Modified : 2018-01-11 12:49:26
+//  Last Modified : 2018-03-20 19:26:53
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
-//
+//  Description   : Pooling 1st Layer Control Module.Generate Read&Write Addr and Related Control 
+//					Signals.
 //
 //==================================================================================================
 module pool1_ctrl(/*autoport*/
@@ -22,17 +22,19 @@ module pool1_ctrl(/*autoport*/
 			clk,
 			rst_n,
 			pool1_start);
-	input clk;
-	input rst_n;
+	input  wire 		clk;
+	input  wire 		rst_n;
 
-	input pool1_start;
+	//Input Feature Read Addr
+	output wire [9:0] f2_raddr;
 
+	//Output Feature Write Addr and Write Enable
 	output wire [7:0] f3_waddr;
 	output wire 	  f3_wr_en;
 
-	output wire [9:0] f2_raddr;
+	//Control Signal
 	output wire  	  pool1_done;
-
+	input  wire       pool1_start;
 	output wire 	  pool1_clr;
 
 	localparam		IDLE = 3'b001;
@@ -40,8 +42,8 @@ module pool1_ctrl(/*autoport*/
 	localparam      DONE = 3'b100;
 
 	reg [2:0]  current_state,next_state;
-
 	wire IDLE2RUN_start,RUN2DONE_start;
+
 	always@(posedge clk or negedge rst_n)begin
 		if(!rst_n)begin
 			current_state <= IDLE;
@@ -50,7 +52,6 @@ module pool1_ctrl(/*autoport*/
 			current_state <= next_state;
 		end
 	end
-
 
 	always@* begin
 		case(current_state)
@@ -79,7 +80,7 @@ module pool1_ctrl(/*autoport*/
 	assign RUN2DONE_start = current_state==RUN && end_cnt3;
 
 //-------------------------------------
-//-------cnt1:kernel column cnt-----------
+//-------cnt1:kernel column cnt--------
 //-------------------------------------
 	reg cnt0;
 	wire add_cnt0,end_cnt0;
@@ -125,7 +126,7 @@ module pool1_ctrl(/*autoport*/
 	assign end_cnt1 = add_cnt1 && cnt1 == 2-1;
 
 //-------------------------------------
-//-------cnt2:column address-----------
+//-------cnt2:Feature column cnt-------
 //-------------------------------------
 	reg[3:0] cnt2;
 	wire add_cnt2,end_cnt2;
@@ -147,11 +148,8 @@ module pool1_ctrl(/*autoport*/
 	assign add_cnt2 = end_cnt1;
 	assign end_cnt2 = add_cnt2 && cnt2 == 14-1;
 
-
-
-
 //-------------------------------------
-//-------cnt3:row address--------------
+//-------cnt3:Feature row cnt----------
 //-------------------------------------
 
 	reg[3:0] cnt3;
@@ -173,7 +171,6 @@ module pool1_ctrl(/*autoport*/
 	assign add_cnt3 = end_cnt2;
 	assign end_cnt3 = add_cnt3 && cnt3 == 14-1;
 
-
 //---------------------------------------
 //-----Address Generate------------------
 //---------------------------------------
@@ -191,9 +188,6 @@ module pool1_ctrl(/*autoport*/
 
 	assign f2_raddr = f2_raddr_s3;
 
-
-	
-
 	//Write Address Gen
 	wire[7:0] f3_waddr_temp;
 	reg[7:0] f3_waddr_s1_1,f3_waddr_s1_2,f3_waddr_s2,f3_waddr_s3;
@@ -207,7 +201,7 @@ module pool1_ctrl(/*autoport*/
   	assign f3_waddr_temp = f3_waddr_s3;
 
 //--------------------------------------
-//----Control Signal Gen
+//----Control Signal Gen----------------
 //--------------------------------------
 	wire 	  pool1_clr_temp;
 	wire      f3_wr_en_temp;

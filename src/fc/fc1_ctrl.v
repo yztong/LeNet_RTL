@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : fc1_ctrl.v
 //  Created On    : 2018-01-06 13:21:03
-//  Last Modified : 2018-01-11 12:59:06
+//  Last Modified : 2018-03-21 10:29:51
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : FC 1st Layer Control Module.
 //
 //
 //==================================================================================================
@@ -23,16 +23,16 @@ module fc1_ctrl(/*autoport*/
 			clk,
 			rst_n,
 			fc1_start);
-	input clk;
-	input rst_n;
-	input fc1_start;
+	input 		clk;
+	input 		rst_n;
 
-	output fc1_done;
-	output fc1_clr;
+	input 		fc1_start;
+	output 		fc1_done;
+	output 		fc1_clr;
+
 	output [4:0]f5_raddr;
 	output [3:0]f5_sel;
 	output [8:0]w5_raddr;
-
 	output      f6_wr_en;
 
 
@@ -46,7 +46,6 @@ module fc1_ctrl(/*autoport*/
 	reg[3:0] cnt1;
 
 	wire add_cnt0,end_cnt0,add_cnt1,end_cnt1;
-
 	wire IDLE2RUN_start,RUN2DONE_start;
 
 	always@(posedge clk or negedge rst_n)begin
@@ -56,7 +55,6 @@ module fc1_ctrl(/*autoport*/
 			current_state <= next_state;
 	end
 
-
 	always@(*) begin
 		case(current_state)
 			IDLE:begin
@@ -64,9 +62,7 @@ module fc1_ctrl(/*autoport*/
 					next_state = RUN;
 				else
 					next_state = IDLE;
-
 			end
-
 			RUN:begin
 				if(RUN2DONE_start)
 					next_state = DONE;

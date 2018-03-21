@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : conv_unit.v
 //  Created On    : 2018-01-05 14:28:03
-//  Last Modified : 2018-01-22 13:53:38
+//  Last Modified : 2018-03-20 16:39:19
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Basic conv_unit to realize bias add and ReLU. The actual Mult&Add is done by DSP.
 //
 //
 //==================================================================================================
@@ -21,9 +21,9 @@ module conv_unit(/*autoport*/
 			b_in);
 	input clk;
 	input rst_n;
-	input [22:0]  d_in;	//sum
+	input [22:0]  d_in;	 //conv result
 	input [15:0]  b_in;  //bias
-	output[15:0]  d_out; //sum + bias
+	output[15:0]  d_out; //final output
 
 
 //--------------------------------
@@ -33,7 +33,7 @@ wire [22:0] temp1;
 adder_23_16 adder (
   .A(d_in),      // input wire [22 : 0] A
   .B(b_in),      // input wire [15 : 0] B
-  .CLK(clk),  // input wire CLK
+  .CLK(clk),     // input wire CLK
   .S(temp1)      // output wire [22 : 0] S
 );
 
