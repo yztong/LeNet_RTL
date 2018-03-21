@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : w6_rom.v
 //  Created On    : 2018-01-08 12:12:47
-//  Last Modified : 2018-01-26 16:07:02
+//  Last Modified : 2018-03-21 15:10:49
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -190,9 +190,9 @@ module w6_rom(/*autoport*/
 
   wire [671:0] w6_rdata;  
   blk_mem_gen_w6_rom w6_rom (
-    .clka(clk),    // input wire clka
-    .addra(w6_raddr),  // input wire [6 : 0] addra
-    .douta(w6_rdata)  // output wire [671 : 0] douta
+    .clka(clk),    // input clka
+    .addra(w6_raddr),  // input [6 : 0] addra
+    .douta(w6_rdata)  // output [671 : 0] douta
   );
 
   assign w6_1_rdata = w6_rdata[7:0];

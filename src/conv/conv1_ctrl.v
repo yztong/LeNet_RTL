@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : conv1_ctrl.v
 //  Created On    : 2017-12-29 18:49:46
-//  Last Modified : 2018-03-20 17:01:55
+//  Last Modified : 2018-03-21 15:06:53
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -24,21 +24,21 @@ module conv1_ctrl(/*autoport*/
 			clk,
 			rst_n,
 			conv1_start);
-	input wire clk;
-	input wire rst_n;
+	input  clk;
+	input  rst_n;
 
 
 	//Input Weight and Feature Read Addr
-	output wire [4:0] w1_raddr;     
-	output wire [9:0] f1_raddr;
+	output  [4:0] w1_raddr;     
+	output  [9:0] f1_raddr;
 
 	//Output Feature Write Addr and Write Enable
-	output wire [9:0] f2_waddr;
-	output wire       f2_wr_en;
+	output  [9:0] f2_waddr;
+	output        f2_wr_en;
 	//Control Signal
-	input  wire       conv1_start;
-	output wire       conv1_done;
-	output wire       conv1_clr;
+	input         conv1_start;
+	output        conv1_done;
+	output        conv1_clr;
 
 	localparam	IDLE=3'b001;
 	localparam  RUN =3'b010;
@@ -133,7 +133,6 @@ module conv1_ctrl(/*autoport*/
 				cnt2 <= cnt2 + 1'b1;
 			end
 		end
-
 	end
 
 	assign add_cnt2 = end_cnt1;
@@ -213,13 +212,13 @@ module conv1_ctrl(/*autoport*/
 	reg  		f2_wr_en_reg[9:0];
 	reg  	    conv1_done_reg[9:0];
 	reg  		conv1_clr_reg[5:0];
+
 	always@*begin
 		 f2_waddr_reg[0] = f2_waddr_temp;
 		 f2_wr_en_reg[0] = f2_wr_en_temp;
 		 conv1_clr_reg[0] = conv1_clr_temp;
 		 conv1_done_reg[0] = conv1_done_temp;
 	end
-
 	generate
 		genvar i,j,k;
 		for (i = 0; i < 7; i = i + 1)

@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : conv_exec.v
 //  Created On    : 2017-12-29 19:27:47
-//  Last Modified : 2018-01-22 13:52:12
+//  Last Modified : 2018-03-21 15:07:55
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -28,24 +28,24 @@ module conv1_exec(/*autoport*/
 			mac1_4,
 			mac1_5,
 			mac1_6);
-	input wire clk;
-	input wire rst_n;
+	input  clk;
+	input  rst_n;
 
 
 	
-	input wire  [22:0] mac1_1;
-	input wire  [22:0] mac1_2;
-	input wire  [22:0] mac1_3;
-	input wire  [22:0] mac1_4;
-	input wire  [22:0] mac1_5;
-	input wire  [22:0] mac1_6;
+	input   [22:0] mac1_1;
+	input   [22:0] mac1_2;
+	input   [22:0] mac1_3;
+	input   [22:0] mac1_4;
+	input   [22:0] mac1_5;
+	input   [22:0] mac1_6;
 
-	output wire [15:0] f2_1_wdata;
-	output wire [15:0] f2_2_wdata;
-	output wire [15:0] f2_3_wdata;
-	output wire [15:0] f2_4_wdata;
-	output wire [15:0] f2_5_wdata;
-	output wire [15:0] f2_6_wdata;
+	output  [15:0] f2_1_wdata;
+	output  [15:0] f2_2_wdata;
+	output  [15:0] f2_3_wdata;
+	output  [15:0] f2_4_wdata;
+	output  [15:0] f2_5_wdata;
+	output  [15:0] f2_6_wdata;
 
 parameter b_1 = 16'b0000010111101010;
 parameter b_2 = 16'b1111101111001000;

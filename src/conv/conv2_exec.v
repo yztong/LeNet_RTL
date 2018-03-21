@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : conv2_exec.v
 //  Created On    : 2018-01-02 13:26:16
-//  Last Modified : 2018-01-22 13:55:09
+//  Last Modified : 2018-03-21 15:08:41
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -129,138 +129,138 @@ module conv2_exec(/*autoport*/
 			clk,
 			rst_n);
 
-	input wire [22:0] mac2_1_1;
-	input wire [22:0] mac2_1_2;
-	input wire [22:0] mac2_1_3;
-	input wire [22:0] mac2_1_4;
-	input wire [22:0] mac2_1_5;
-	input wire [22:0] mac2_1_6;
+	input [22:0] mac2_1_1;
+	input [22:0] mac2_1_2;
+	input [22:0] mac2_1_3;
+	input [22:0] mac2_1_4;
+	input [22:0] mac2_1_5;
+	input [22:0] mac2_1_6;
 
-	input wire [22:0] mac2_2_1;
-	input wire [22:0] mac2_2_2;
-	input wire [22:0] mac2_2_3;
-	input wire [22:0] mac2_2_4;
-	input wire [22:0] mac2_2_5;
-	input wire [22:0] mac2_2_6;
+	input [22:0] mac2_2_1;
+	input [22:0] mac2_2_2;
+	input [22:0] mac2_2_3;
+	input [22:0] mac2_2_4;
+	input [22:0] mac2_2_5;
+	input [22:0] mac2_2_6;
 
-	input wire [22:0] mac2_3_1;
-	input wire [22:0] mac2_3_2;
-	input wire [22:0] mac2_3_3;
-	input wire [22:0] mac2_3_4;
-	input wire [22:0] mac2_3_5;
-	input wire [22:0] mac2_3_6;
+	input [22:0] mac2_3_1;
+	input [22:0] mac2_3_2;
+	input [22:0] mac2_3_3;
+	input [22:0] mac2_3_4;
+	input [22:0] mac2_3_5;
+	input [22:0] mac2_3_6;
 
-	input wire [22:0] mac2_4_1;
-	input wire [22:0] mac2_4_2;
-	input wire [22:0] mac2_4_3;
-	input wire [22:0] mac2_4_4;
-	input wire [22:0] mac2_4_5;
-	input wire [22:0] mac2_4_6;
+	input [22:0] mac2_4_1;
+	input [22:0] mac2_4_2;
+	input [22:0] mac2_4_3;
+	input [22:0] mac2_4_4;
+	input [22:0] mac2_4_5;
+	input [22:0] mac2_4_6;
 
-	input wire [22:0] mac2_5_1;
-	input wire [22:0] mac2_5_2;
-	input wire [22:0] mac2_5_3;
-	input wire [22:0] mac2_5_4;
-	input wire [22:0] mac2_5_5;
-	input wire [22:0] mac2_5_6;
+	input [22:0] mac2_5_1;
+	input [22:0] mac2_5_2;
+	input [22:0] mac2_5_3;
+	input [22:0] mac2_5_4;
+	input [22:0] mac2_5_5;
+	input [22:0] mac2_5_6;
 
-	input wire [22:0] mac2_6_1;
-	input wire [22:0] mac2_6_2;
-	input wire [22:0] mac2_6_3;
-	input wire [22:0] mac2_6_4;
-	input wire [22:0] mac2_6_5;
-	input wire [22:0] mac2_6_6;
+	input [22:0] mac2_6_1;
+	input [22:0] mac2_6_2;
+	input [22:0] mac2_6_3;
+	input [22:0] mac2_6_4;
+	input [22:0] mac2_6_5;
+	input [22:0] mac2_6_6;
 
-	input wire [22:0] mac2_7_1;
-	input wire [22:0] mac2_7_2;
-	input wire [22:0] mac2_7_3;
-	input wire [22:0] mac2_7_4;
-	input wire [22:0] mac2_7_5;
-	input wire [22:0] mac2_7_6;
+	input [22:0] mac2_7_1;
+	input [22:0] mac2_7_2;
+	input [22:0] mac2_7_3;
+	input [22:0] mac2_7_4;
+	input [22:0] mac2_7_5;
+	input [22:0] mac2_7_6;
 
-	input wire [22:0] mac2_8_1;
-	input wire [22:0] mac2_8_2;
-	input wire [22:0] mac2_8_3;
-	input wire [22:0] mac2_8_4;
-	input wire [22:0] mac2_8_5;
-	input wire [22:0] mac2_8_6;
+	input [22:0] mac2_8_1;
+	input [22:0] mac2_8_2;
+	input [22:0] mac2_8_3;
+	input [22:0] mac2_8_4;
+	input [22:0] mac2_8_5;
+	input [22:0] mac2_8_6;
 
-	input wire [22:0] mac2_9_1;
-	input wire [22:0] mac2_9_2;
-	input wire [22:0] mac2_9_3;
-	input wire [22:0] mac2_9_4;
-	input wire [22:0] mac2_9_5;
-	input wire [22:0] mac2_9_6;
+	input [22:0] mac2_9_1;
+	input [22:0] mac2_9_2;
+	input [22:0] mac2_9_3;
+	input [22:0] mac2_9_4;
+	input [22:0] mac2_9_5;
+	input [22:0] mac2_9_6;
 
-	input wire [22:0] mac2_10_1;
-	input wire [22:0] mac2_10_2;
-	input wire [22:0] mac2_10_3;
-	input wire [22:0] mac2_10_4;
-	input wire [22:0] mac2_10_5;
-	input wire [22:0] mac2_10_6;
+	input [22:0] mac2_10_1;
+	input [22:0] mac2_10_2;
+	input [22:0] mac2_10_3;
+	input [22:0] mac2_10_4;
+	input [22:0] mac2_10_5;
+	input [22:0] mac2_10_6;
 
-	input wire [22:0] mac2_11_1;
-	input wire [22:0] mac2_11_2;
-	input wire [22:0] mac2_11_3;
-	input wire [22:0] mac2_11_4;
-	input wire [22:0] mac2_11_5;
-	input wire [22:0] mac2_11_6;
+	input [22:0] mac2_11_1;
+	input [22:0] mac2_11_2;
+	input [22:0] mac2_11_3;
+	input [22:0] mac2_11_4;
+	input [22:0] mac2_11_5;
+	input [22:0] mac2_11_6;
 
-	input wire [22:0] mac2_12_1;
-	input wire [22:0] mac2_12_2;
-	input wire [22:0] mac2_12_3;
-	input wire [22:0] mac2_12_4;
-	input wire [22:0] mac2_12_5;
-	input wire [22:0] mac2_12_6;
+	input [22:0] mac2_12_1;
+	input [22:0] mac2_12_2;
+	input [22:0] mac2_12_3;
+	input [22:0] mac2_12_4;
+	input [22:0] mac2_12_5;
+	input [22:0] mac2_12_6;
 
-	input wire [22:0] mac2_13_1;
-	input wire [22:0] mac2_13_2;
-	input wire [22:0] mac2_13_3;
-	input wire [22:0] mac2_13_4;
-	input wire [22:0] mac2_13_5;
-	input wire [22:0] mac2_13_6;
+	input [22:0] mac2_13_1;
+	input [22:0] mac2_13_2;
+	input [22:0] mac2_13_3;
+	input [22:0] mac2_13_4;
+	input [22:0] mac2_13_5;
+	input [22:0] mac2_13_6;
 
-	input wire [22:0] mac2_14_1;
-	input wire [22:0] mac2_14_2;
-	input wire [22:0] mac2_14_3;
-	input wire [22:0] mac2_14_4;
-	input wire [22:0] mac2_14_5;
-	input wire [22:0] mac2_14_6;
+	input [22:0] mac2_14_1;
+	input [22:0] mac2_14_2;
+	input [22:0] mac2_14_3;
+	input [22:0] mac2_14_4;
+	input [22:0] mac2_14_5;
+	input [22:0] mac2_14_6;
 
-	input wire [22:0] mac2_15_1;
-	input wire [22:0] mac2_15_2;
-	input wire [22:0] mac2_15_3;
-	input wire [22:0] mac2_15_4;
-	input wire [22:0] mac2_15_5;
-	input wire [22:0] mac2_15_6;
+	input [22:0] mac2_15_1;
+	input [22:0] mac2_15_2;
+	input [22:0] mac2_15_3;
+	input [22:0] mac2_15_4;
+	input [22:0] mac2_15_5;
+	input [22:0] mac2_15_6;
 
-	input wire [22:0] mac2_16_1;
-	input wire [22:0] mac2_16_2;
-	input wire [22:0] mac2_16_3;
-	input wire [22:0] mac2_16_4;
-	input wire [22:0] mac2_16_5;
-	input wire [22:0] mac2_16_6;
+	input [22:0] mac2_16_1;
+	input [22:0] mac2_16_2;
+	input [22:0] mac2_16_3;
+	input [22:0] mac2_16_4;
+	input [22:0] mac2_16_5;
+	input [22:0] mac2_16_6;
 	
 
 	input clk;
 	input rst_n;
 
-	output wire [15:0] f4_1_wdata;
-	output wire [15:0] f4_2_wdata;
-	output wire [15:0] f4_3_wdata;
-	output wire [15:0] f4_4_wdata;
-	output wire [15:0] f4_5_wdata;
-	output wire [15:0] f4_6_wdata;
-	output wire [15:0] f4_7_wdata;
-	output wire [15:0] f4_8_wdata;
-	output wire [15:0] f4_9_wdata;
-	output wire [15:0] f4_10_wdata;
-	output wire [15:0] f4_11_wdata;
-	output wire [15:0] f4_12_wdata;
-	output wire [15:0] f4_13_wdata;
-	output wire [15:0] f4_14_wdata;
-	output wire [15:0] f4_15_wdata;
-	output wire [15:0] f4_16_wdata;
+	output [15:0] f4_1_wdata;
+	output [15:0] f4_2_wdata;
+	output [15:0] f4_3_wdata;
+	output [15:0] f4_4_wdata;
+	output [15:0] f4_5_wdata;
+	output [15:0] f4_6_wdata;
+	output [15:0] f4_7_wdata;
+	output [15:0] f4_8_wdata;
+	output [15:0] f4_9_wdata;
+	output [15:0] f4_10_wdata;
+	output [15:0] f4_11_wdata;
+	output [15:0] f4_12_wdata;
+	output [15:0] f4_13_wdata;
+	output [15:0] f4_14_wdata;
+	output [15:0] f4_15_wdata;
+	output [15:0] f4_16_wdata;
 
 
 parameter b_1 = 16'b0000001100101101;

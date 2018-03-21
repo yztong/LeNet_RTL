@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool_unit.v
 //  Created On    : 2018-01-02 18:58:30
-//  Last Modified : 2018-01-07 15:49:00
+//  Last Modified : 2018-03-21 15:14:48
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -19,13 +19,13 @@ module pool_unit(/*autoport*/
 			rst_n,
 			d_in,
 			pool_clr);
-	input  clk;
-	input  rst_n;
+	input  	clk;
+	input  	rst_n;
 
-	input wire [15:0]d_in;
+	input 	pool_clr;
+	input 	[15:0]	d_in;
+	output 	[15:0]	d_out;
 
-	output wire [15:0]d_out;
-	input wire pool_clr;
 //------------------------------
 //------stage1: compare---------
 //------------------------------

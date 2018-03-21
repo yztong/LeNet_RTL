@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool1_ctrl.v
 //  Created On    : 2017-12-28 14:23:21
-//  Last Modified : 2018-03-20 19:26:53
+//  Last Modified : 2018-03-21 15:16:55
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -22,20 +22,20 @@ module pool1_ctrl(/*autoport*/
 			clk,
 			rst_n,
 			pool1_start);
-	input  wire 		clk;
-	input  wire 		rst_n;
+	input 	clk;
+	input  	rst_n;
 
 	//Input Feature Read Addr
-	output wire [9:0] f2_raddr;
+	output [9:0] f2_raddr;
 
 	//Output Feature Write Addr and Write Enable
-	output wire [7:0] f3_waddr;
-	output wire 	  f3_wr_en;
+	output [7:0] f3_waddr;
+	output 	f3_wr_en;
 
 	//Control Signal
-	output wire  	  pool1_done;
-	input  wire       pool1_start;
-	output wire 	  pool1_clr;
+	input 	pool1_start;
+	output  pool1_done;
+	output 	pool1_clr;
 
 	localparam		IDLE = 3'b001;
 	localparam   	RUN  = 3'b010;

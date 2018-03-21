@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : conv2_ctrl.v
 //  Created On    : 2017-12-29 18:49:46
-//  Last Modified : 2018-03-21 10:24:26
+//  Last Modified : 2018-03-21 15:07:20
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -24,22 +24,22 @@ module conv2_ctrl(/*autoport*/
 			clk,
 			rst_n,
 			conv2_start);
-	input wire clk;
-	input wire rst_n;
+	input  clk;
+	input  rst_n;
 
 
 	//Input Weight and Feature Read Addr
-	output wire [4:0] w3_raddr;
-	output wire [7:0] f3_raddr;
+	output  [4:0] w3_raddr;
+	output  [7:0] f3_raddr;
 
 	//Output Feature Write Addr and Write Enable
-	output wire [6:0] f4_waddr;
-	output wire       f4_wr_en;
+	output  [6:0] f4_waddr;
+	output        f4_wr_en;
 
 	//Control Signal
-	input  wire       conv2_start;
-	output wire       conv2_clr;
-	output wire       conv2_done;
+	input         conv2_start;
+	output        conv2_clr;
+	output        conv2_done;
 
 	localparam	IDLE=3'b001;
 	localparam  RUN =3'b010;

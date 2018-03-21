@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : f5_ram.v
 //  Created On    : 2018-01-07 20:39:04
-//  Last Modified : 2018-01-26 16:17:43
+//  Last Modified : 2018-03-21 15:10:20
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -37,30 +37,30 @@ module f5_ram(/*autoport*/
 			f5_sel,
 			f5_raddr);
 
-	input wire  [15:0] 	 f5_1_wdata; 
-	input wire  [15:0] 	 f5_2_wdata; 
-	input wire  [15:0] 	 f5_3_wdata; 
-	input wire  [15:0] 	 f5_4_wdata; 
-	input wire  [15:0] 	 f5_5_wdata; 
-	input wire  [15:0] 	 f5_6_wdata; 
-	input wire  [15:0] 	 f5_7_wdata;
-	input wire  [15:0] 	 f5_8_wdata;
-	input wire  [15:0] 	 f5_9_wdata;
-	input wire  [15:0] 	 f5_10_wdata;
-	input wire  [15:0] 	 f5_11_wdata;
-	input wire  [15:0] 	 f5_12_wdata;
-	input wire  [15:0] 	 f5_13_wdata;
-	input wire  [15:0] 	 f5_14_wdata;
-	input wire  [15:0] 	 f5_15_wdata;
-	input wire  [15:0] 	 f5_16_wdata;
+	input  [15:0] 	 f5_1_wdata; 
+	input  [15:0] 	 f5_2_wdata; 
+	input  [15:0] 	 f5_3_wdata; 
+	input  [15:0] 	 f5_4_wdata; 
+	input  [15:0] 	 f5_5_wdata; 
+	input  [15:0] 	 f5_6_wdata; 
+	input  [15:0] 	 f5_7_wdata;
+	input  [15:0] 	 f5_8_wdata;
+	input  [15:0] 	 f5_9_wdata;
+	input  [15:0] 	 f5_10_wdata;
+	input  [15:0] 	 f5_11_wdata;
+	input  [15:0] 	 f5_12_wdata;
+	input  [15:0] 	 f5_13_wdata;
+	input  [15:0] 	 f5_14_wdata;
+	input  [15:0] 	 f5_15_wdata;
+	input  [15:0] 	 f5_16_wdata;
 
-	input wire clk;
-	input wire [4:0]  f5_waddr;
-	input wire        f5_wr_en;
-	input wire [3:0]  f5_sel;
-	input wire [4:0]  f5_raddr;
+	input clk;
+	input [4:0]  f5_waddr;
+	input        f5_wr_en;
+	input [3:0]  f5_sel;
+	input [4:0]  f5_raddr;
 
-	output wire [15:0] f5_rdata;
+	output [15:0] f5_rdata;
 
 
   wire [15:0] f5_1_rdata;
@@ -82,12 +82,12 @@ module f5_ram(/*autoport*/
 
   wire [255:0] f5_wdata,f5_rdata_all;
   dist_mem_gen_f5_ram f5_ram (
-    .a(f5_waddr),        // input wire [4 : 0] a
-    .d(f5_wdata),        // input wire [255 : 0] d
-    .dpra(f5_raddr),  // input wire [4 : 0] dpra
-    .clk(clk),    // input wire clk
-    .we(f5_wr_en),      // input wire we
-    .qdpo(f5_rdata_all)  // output wire [255 : 0] qdpo
+    .a(f5_waddr),        // input [4 : 0] a
+    .d(f5_wdata),        // input [255 : 0] d
+    .dpra(f5_raddr),  // input [4 : 0] dpra
+    .clk(clk),    // input clk
+    .we(f5_wr_en),      // input we
+    .qdpo(f5_rdata_all)  // output [255 : 0] qdpo
   );
 
 assign f5_wdata = {f5_16_wdata,f5_15_wdata,f5_14_wdata,f5_13_wdata,f5_12_wdata,f5_11_wdata,

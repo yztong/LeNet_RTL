@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : fc3_ctrl.v
 //  Created On    : 2018-01-06 14:32:33
-//  Last Modified : 2018-01-10 20:42:46
+//  Last Modified : 2018-03-21 15:27:41
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -14,27 +14,27 @@
 
 module fc3_ctrl(/*autoport*/
 //output
-			fc3_done,
-			fc3_clr,
 			f7_raddr,
 			w7_raddr,
 			f8_wr_en,
+			fc3_done,
+			fc3_clr,
 //input
 			clk,
 			rst_n,
 			fc3_start);
-	input clk;
-	input rst_n;
-	input fc3_start;
+	input 	clk;
+	input 	rst_n;
 
-	output fc3_done;
-	output fc3_clr;
+	//Input Weight and Feature Read Addr	
 	output [6:0]f7_raddr;
-	
 	output [6:0]w7_raddr;
-
+	//Output Feature Write Enable
 	output      f8_wr_en;
-
+	//Control Signal
+	input 	fc3_start;
+	output 	fc3_done;
+	output 	fc3_clr;
 
 	localparam	IDLE=3'b001;
 	localparam  RUN =3'b010;
@@ -44,9 +44,7 @@ module fc3_ctrl(/*autoport*/
 
 	reg[6:0] cnt0;
 
-
 	wire add_cnt0,end_cnt0;
-
 	wire IDLE2RUN_start,RUN2DONE_start;
 
 	always@(posedge clk or negedge rst_n)begin
@@ -56,7 +54,6 @@ module fc3_ctrl(/*autoport*/
 			current_state <= next_state;
 	end
 
-
 	always@(*) begin
 		case(current_state)
 			IDLE:begin
@@ -64,9 +61,7 @@ module fc3_ctrl(/*autoport*/
 					next_state = RUN;
 				else
 					next_state = IDLE;
-
 			end
-
 			RUN:begin
 				if(RUN2DONE_start)
 					next_state = DONE;
@@ -83,7 +78,6 @@ module fc3_ctrl(/*autoport*/
 
 	assign IDLE2RUN_start = current_state==IDLE && fc3_start == 1'b1;
 	assign RUN2DONE_start = current_state==RUN  && end_cnt0;
-
 
 	always @(posedge clk or negedge  rst_n) begin
 		if (!rst_n) begin
@@ -102,9 +96,6 @@ module fc3_ctrl(/*autoport*/
 
 	assign add_cnt0 = current_state==RUN;
 	assign end_cnt0 = add_cnt0 && cnt0 == 84-1;
-
-	
-
 
 
 	assign f7_raddr = cnt0;

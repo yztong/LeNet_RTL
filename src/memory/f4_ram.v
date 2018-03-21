@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : f4_ram.v
 //  Created On    : 2018-01-01 15:35:30
-//  Last Modified : 2018-01-26 15:40:49
+//  Last Modified : 2018-03-21 15:10:14
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -52,54 +52,54 @@ module f4_ram(/*autoport*/
 			f4_raddr);
 	input clk;
 //write side
-	input wire [15:0] f4_1_wdata;
-	input wire [15:0] f4_2_wdata;
-	input wire [15:0] f4_3_wdata;
-	input wire [15:0] f4_4_wdata;
-	input wire [15:0] f4_5_wdata;
-	input wire [15:0] f4_6_wdata;
-	input wire [15:0] f4_7_wdata;
-	input wire [15:0] f4_8_wdata;
-	input wire [15:0] f4_9_wdata;
-	input wire [15:0] f4_10_wdata;
-	input wire [15:0] f4_11_wdata;
-	input wire [15:0] f4_12_wdata;
-	input wire [15:0] f4_13_wdata;
-	input wire [15:0] f4_14_wdata;
-	input wire [15:0] f4_15_wdata;
-	input wire [15:0] f4_16_wdata;
+	input [15:0] f4_1_wdata;
+	input [15:0] f4_2_wdata;
+	input [15:0] f4_3_wdata;
+	input [15:0] f4_4_wdata;
+	input [15:0] f4_5_wdata;
+	input [15:0] f4_6_wdata;
+	input [15:0] f4_7_wdata;
+	input [15:0] f4_8_wdata;
+	input [15:0] f4_9_wdata;
+	input [15:0] f4_10_wdata;
+	input [15:0] f4_11_wdata;
+	input [15:0] f4_12_wdata;
+	input [15:0] f4_13_wdata;
+	input [15:0] f4_14_wdata;
+	input [15:0] f4_15_wdata;
+	input [15:0] f4_16_wdata;
 
 
-	input wire 		  f4_wr_en;
-	input wire [6:0]  f4_waddr;
+	input 		  f4_wr_en;
+	input [6:0]  f4_waddr;
 //read side
-	input wire [6:0]  f4_raddr;
-	output wire[15:0] f4_1_rdata;
-	output wire[15:0] f4_2_rdata;
-	output wire[15:0] f4_3_rdata;
-	output wire[15:0] f4_4_rdata;
-	output wire[15:0] f4_5_rdata;
-	output wire[15:0] f4_6_rdata;
-	output wire[15:0] f4_7_rdata;
-	output wire[15:0] f4_8_rdata;
-	output wire[15:0] f4_9_rdata;
-	output wire[15:0] f4_10_rdata;
-	output wire[15:0] f4_11_rdata;
-	output wire[15:0] f4_12_rdata;
-	output wire[15:0] f4_13_rdata;
-	output wire[15:0] f4_14_rdata;
-	output wire[15:0] f4_15_rdata;
-	output wire[15:0] f4_16_rdata;
+	input [6:0]  f4_raddr;
+	output[15:0] f4_1_rdata;
+	output[15:0] f4_2_rdata;
+	output[15:0] f4_3_rdata;
+	output[15:0] f4_4_rdata;
+	output[15:0] f4_5_rdata;
+	output[15:0] f4_6_rdata;
+	output[15:0] f4_7_rdata;
+	output[15:0] f4_8_rdata;
+	output[15:0] f4_9_rdata;
+	output[15:0] f4_10_rdata;
+	output[15:0] f4_11_rdata;
+	output[15:0] f4_12_rdata;
+	output[15:0] f4_13_rdata;
+	output[15:0] f4_14_rdata;
+	output[15:0] f4_15_rdata;
+	output[15:0] f4_16_rdata;
 
 	wire[255:0] f4_wdata,f4_rdata;
 	blk_mem_gen_f4_ram f4_ram (
-	  .clka(clk),    // input wire clka
-	  .wea(f4_wr_en),      // input wire [0 : 0] wea
-	  .addra(f4_waddr),  // input wire [6 : 0] addra
-	  .dina(f4_wdata),    // input wire [255 : 0] dina
-	  .clkb(clk),    // input wire clkb
-	  .addrb(f4_raddr),  // input wire [6 : 0] addrb
-	  .doutb(f4_rdata)  // output wire [255 : 0] doutb
+	  .clka(clk),    // input clka
+	  .wea(f4_wr_en),      // input [0 : 0] wea
+	  .addra(f4_waddr),  // input [6 : 0] addra
+	  .dina(f4_wdata),    // input [255 : 0] dina
+	  .clkb(clk),    // input clkb
+	  .addrb(f4_raddr),  // input [6 : 0] addrb
+	  .doutb(f4_rdata)  // output [255 : 0] doutb
 	);
 	assign f4_wdata = {f4_16_wdata,f4_15_wdata,f4_14_wdata,f4_13_wdata,
 		f4_12_wdata,f4_11_wdata,f4_10_wdata,f4_9_wdata,f4_8_wdata,f4_7_wdata,

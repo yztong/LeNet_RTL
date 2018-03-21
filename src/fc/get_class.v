@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : get_class.v
 //  Created On    : 2018-01-23 09:28:48
-//  Last Modified : 2018-01-23 23:11:03
+//  Last Modified : 2018-03-21 15:29:14
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Comparators Tree to Compare final layers' output.
 //
 //
 //==================================================================================================

@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : fc2_ctrl.v
 //  Created On    : 2018-01-06 14:20:30
-//  Last Modified : 2018-01-11 13:01:33
+//  Last Modified : 2018-03-21 15:26:51
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -11,30 +11,29 @@
 //
 //
 //==================================================================================================
-
 module fc2_ctrl(/*autoport*/
 //output
-			fc2_done,
-			fc2_clr,
 			f6_raddr,
 			w6_raddr,
 			f7_wr_en,
+			fc2_done,
+			fc2_clr,
 //input
 			clk,
 			rst_n,
 			fc2_start);
 	input clk;
 	input rst_n;
-	input fc2_start;
 
+	//Input Weight and Feature Read Addr
+	output [6:0]f6_raddr;
+	output [6:0]w6_raddr;
+	//Output Feature Write Enable
+	output      f7_wr_en;
+	//Control Signal
+	input fc2_start;
 	output fc2_done;
 	output fc2_clr;
-	output [6:0]f6_raddr;
-	
-	output [6:0]w6_raddr;
-
-	output      f7_wr_en;
-
 
 	localparam	IDLE=3'b001;
 	localparam  RUN =3'b010;
@@ -44,9 +43,7 @@ module fc2_ctrl(/*autoport*/
 
 	reg[6:0] cnt0;
 
-
 	wire add_cnt0,end_cnt0;
-
 	wire IDLE2RUN_start,RUN2DONE_start;
 
 	always@(posedge clk or negedge rst_n)begin
@@ -56,7 +53,6 @@ module fc2_ctrl(/*autoport*/
 			current_state <= next_state;
 	end
 
-
 	always@(*) begin
 		case(current_state)
 			IDLE:begin
@@ -64,9 +60,7 @@ module fc2_ctrl(/*autoport*/
 					next_state = RUN;
 				else
 					next_state = IDLE;
-
 			end
-
 			RUN:begin
 				if(RUN2DONE_start)
 					next_state = DONE;
@@ -83,7 +77,6 @@ module fc2_ctrl(/*autoport*/
 
 	assign IDLE2RUN_start = current_state==IDLE && fc2_start == 1'b1;
 	assign RUN2DONE_start = current_state==RUN  && end_cnt0;
-
 
 	always @(posedge clk or negedge  rst_n) begin
 		if (!rst_n) begin
@@ -102,10 +95,6 @@ module fc2_ctrl(/*autoport*/
 
 	assign add_cnt0 = current_state==RUN;
 	assign end_cnt0 = add_cnt0 && cnt0 == 120-1;
-
-	
-
-
 
 	assign f6_raddr = cnt0;
 	assign w6_raddr = cnt0;
@@ -141,8 +130,8 @@ module fc2_ctrl(/*autoport*/
     	fc2_done_temp_r5 <= fc2_done_temp_r4;
     	fc2_done_temp_r6 <= fc2_done_temp_r5;
     	fc2_done_temp_r7 <= fc2_done_temp_r6;
-
-    	fc2_clr_temp_r1 <= fc2_clr_temp ;    //fc_clr should assert at 2nd cycle of mac,DSP include 1, so here is 2 + 2 -1
+//fc_clr should assert at 2nd cycle of mac,DSP include 1, so here is 2 + 2 -1
+    	fc2_clr_temp_r1 <= fc2_clr_temp ;    
     	fc2_clr_temp_r2 <= fc2_clr_temp_r1 ;
     	fc2_clr_temp_r3 <= fc2_clr_temp_r2 ;
 

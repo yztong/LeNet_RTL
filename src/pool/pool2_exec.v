@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool2_exec.v
 //  Created On    : 2018-01-02 17:16:08
-//  Last Modified : 2018-01-07 15:48:56
+//  Last Modified : 2018-03-21 15:20:19
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -50,45 +50,45 @@ module pool2_exec(/*autoport*/
 			f4_15_rdata,
 			f4_16_rdata,
 			pool2_clr);
-	input  clk;
-	input  rst_n;
+	input  	clk;
+	input  	rst_n;
 
-	input wire  [15:0] 	 f4_1_rdata; 
-	input wire  [15:0] 	 f4_2_rdata; 
-	input wire  [15:0] 	 f4_3_rdata; 
-	input wire  [15:0] 	 f4_4_rdata; 
-	input wire  [15:0] 	 f4_5_rdata; 
-	input wire  [15:0] 	 f4_6_rdata; 
-	input wire  [15:0] 	 f4_7_rdata;
-	input wire  [15:0] 	 f4_8_rdata;
-	input wire  [15:0] 	 f4_9_rdata;
-	input wire  [15:0] 	 f4_10_rdata;
-	input wire  [15:0] 	 f4_11_rdata;
-	input wire  [15:0] 	 f4_12_rdata;
-	input wire  [15:0] 	 f4_13_rdata;
-	input wire  [15:0] 	 f4_14_rdata;
-	input wire  [15:0] 	 f4_15_rdata;
-	input wire  [15:0] 	 f4_16_rdata;
+	input  [15:0] 	 f4_1_rdata; 
+	input  [15:0] 	 f4_2_rdata; 
+	input  [15:0] 	 f4_3_rdata; 
+	input  [15:0] 	 f4_4_rdata; 
+	input  [15:0] 	 f4_5_rdata; 
+	input  [15:0] 	 f4_6_rdata; 
+	input  [15:0] 	 f4_7_rdata;
+	input  [15:0] 	 f4_8_rdata;
+	input  [15:0] 	 f4_9_rdata;
+	input  [15:0] 	 f4_10_rdata;
+	input  [15:0] 	 f4_11_rdata;
+	input  [15:0] 	 f4_12_rdata;
+	input  [15:0] 	 f4_13_rdata;
+	input  [15:0] 	 f4_14_rdata;
+	input  [15:0] 	 f4_15_rdata;
+	input  [15:0] 	 f4_16_rdata;
 
-	output wire  [15:0] 	 f5_1_wdata; 
-	output wire  [15:0] 	 f5_2_wdata; 
-	output wire  [15:0] 	 f5_3_wdata; 
-	output wire  [15:0] 	 f5_4_wdata; 
-	output wire  [15:0] 	 f5_5_wdata; 
-	output wire  [15:0] 	 f5_6_wdata; 
-	output wire  [15:0] 	 f5_7_wdata;
-	output wire  [15:0] 	 f5_8_wdata;
-	output wire  [15:0] 	 f5_9_wdata;
-	output wire  [15:0] 	 f5_10_wdata;
-	output wire  [15:0] 	 f5_11_wdata;
-	output wire  [15:0] 	 f5_12_wdata;
-	output wire  [15:0] 	 f5_13_wdata;
-	output wire  [15:0] 	 f5_14_wdata;
-	output wire  [15:0] 	 f5_15_wdata;
-	output wire  [15:0] 	 f5_16_wdata;
+	output  [15:0] 	 f5_1_wdata; 
+	output  [15:0] 	 f5_2_wdata; 
+	output  [15:0] 	 f5_3_wdata; 
+	output  [15:0] 	 f5_4_wdata; 
+	output  [15:0] 	 f5_5_wdata; 
+	output  [15:0] 	 f5_6_wdata; 
+	output  [15:0] 	 f5_7_wdata;
+	output  [15:0] 	 f5_8_wdata;
+	output  [15:0] 	 f5_9_wdata;
+	output  [15:0] 	 f5_10_wdata;
+	output  [15:0] 	 f5_11_wdata;
+	output  [15:0] 	 f5_12_wdata;
+	output  [15:0] 	 f5_13_wdata;
+	output  [15:0] 	 f5_14_wdata;
+	output  [15:0] 	 f5_15_wdata;
+	output  [15:0] 	 f5_16_wdata;
 
 
-	input wire pool2_clr;
+	input 	pool2_clr;
 pool_unit  u1(/*autoinst*/
 			.d_out(f5_1_wdata[15:0]),
 			.clk(clk),

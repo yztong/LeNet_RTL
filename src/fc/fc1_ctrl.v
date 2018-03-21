@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : fc1_ctrl.v
 //  Created On    : 2018-01-06 13:21:03
-//  Last Modified : 2018-03-21 10:29:51
+//  Last Modified : 2018-03-21 15:23:58
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -13,12 +13,12 @@
 //==================================================================================================
 module fc1_ctrl(/*autoport*/
 //output
-			fc1_done,
-			fc1_clr,
 			f5_raddr,
 			f5_sel,
 			w5_raddr,
 			f6_wr_en,
+			fc1_done,
+			fc1_clr,
 //input
 			clk,
 			rst_n,
@@ -26,16 +26,16 @@ module fc1_ctrl(/*autoport*/
 	input 		clk;
 	input 		rst_n;
 
-	input 		fc1_start;
-	output 		fc1_done;
-	output 		fc1_clr;
-
+	//Input Weight and Feature Read Addr
 	output [4:0]f5_raddr;
 	output [3:0]f5_sel;
 	output [8:0]w5_raddr;
+	//Output Feature Write Enable
 	output      f6_wr_en;
-
-
+	//Control Signal
+	input 		fc1_start;
+	output 		fc1_done;
+	output 		fc1_clr;
 	localparam	IDLE=3'b001;
 	localparam  RUN =3'b010;
 	localparam  DONE=3'b100;
@@ -177,8 +177,8 @@ module fc1_ctrl(/*autoport*/
     	fc1_done_temp_r8 <= fc1_done_temp_r7;
     	fc1_done_temp_r9 <= fc1_done_temp_r8;
 
-
-    	fc1_clr_temp_r1 <= fc1_clr_temp ;      //fc_clr should assert at 2nd cycle of mac,DSP include 1, so here is 2 + 2 + 2 -1
+		//fc_clr should assert at 2nd cycle of mac,DSP include 1, so here is 2 + 2 + 2 -1
+    	fc1_clr_temp_r1 <= fc1_clr_temp ;      
     	fc1_clr_temp_r2 <= fc1_clr_temp_r1 ;
     	fc1_clr_temp_r3 <= fc1_clr_temp_r2 ;
     	fc1_clr_temp_r4 <= fc1_clr_temp_r3 ;

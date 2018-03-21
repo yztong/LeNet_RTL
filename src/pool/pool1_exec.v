@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool1_exec.v
 //  Created On    : 2018-01-02 17:16:08
-//  Last Modified : 2018-01-07 15:48:49
+//  Last Modified : 2018-03-21 15:20:27
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -30,25 +30,25 @@ module pool1_exec(/*autoport*/
 			f2_5_rdata,
 			f2_6_rdata,
 			pool1_clr);
-	input  clk;
-	input  rst_n;
+	input  	clk;
+	input  	rst_n;
 
-	input wire  [15:0] 	 f2_1_rdata; 
-	input wire  [15:0] 	 f2_2_rdata; 
-	input wire  [15:0] 	 f2_3_rdata; 
-	input wire  [15:0] 	 f2_4_rdata; 
-	input wire  [15:0] 	 f2_5_rdata; 
-	input wire  [15:0] 	 f2_6_rdata; 
+	input  [15:0] 	 f2_1_rdata; 
+	input  [15:0] 	 f2_2_rdata; 
+	input  [15:0] 	 f2_3_rdata; 
+	input  [15:0] 	 f2_4_rdata; 
+	input  [15:0] 	 f2_5_rdata; 
+	input  [15:0] 	 f2_6_rdata; 
 
-	output wire [15:0]  f3_1_wdata;
-	output wire [15:0]  f3_2_wdata;
-	output wire [15:0]  f3_3_wdata;
-	output wire [15:0]  f3_4_wdata;
-	output wire [15:0]  f3_5_wdata;
-	output wire [15:0]  f3_6_wdata;
+	output [15:0]  f3_1_wdata;
+	output [15:0]  f3_2_wdata;
+	output [15:0]  f3_3_wdata;
+	output [15:0]  f3_4_wdata;
+	output [15:0]  f3_5_wdata;
+	output [15:0]  f3_6_wdata;
 
 
-	input wire pool1_clr;
+	input 	pool1_clr;
 pool_unit  u1(/*autoinst*/
 			.d_out(f3_1_wdata[15:0]),
 			.clk(clk),

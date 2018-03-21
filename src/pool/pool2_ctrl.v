@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool2_ctrl.v
 //  Created On    : 2017-12-28 14:23:21
-//  Last Modified : 2018-01-11 12:49:55
+//  Last Modified : 2018-03-21 15:18:49
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -13,27 +13,28 @@
 //==================================================================================================
 module pool2_ctrl(/*autoport*/
 //output
+			f4_raddr,
 			f5_waddr,
 			f5_wr_en,
-			f4_raddr,
 			pool2_done,
 			pool2_clr,
 //input
 			clk,
 			rst_n,
 			pool2_start);
-	input clk;
-	input rst_n;
+	input 	clk;
+	input 	rst_n;
+	//Input Feature Read Addr
+	output 	[6:0] 	f4_raddr;
 
-	input pool2_start;
+	//Output Feature Write Addr and Write Enable
+	output 	[4:0] 	f5_waddr;
+	output 	f5_wr_en;
 
-	output wire [4:0] f5_waddr;
-	output wire 	  f5_wr_en;
-
-	output wire [6:0] f4_raddr;
-	output wire  	  pool2_done;
-
-	output wire 	  pool2_clr;
+	//Control Signal
+	input 	pool2_start;	
+	output  pool2_done;
+	output 	pool2_clr;
 
 	localparam		IDLE = 3'b001;
 	localparam   	RUN  = 3'b010;
@@ -50,7 +51,6 @@ module pool2_ctrl(/*autoport*/
 			current_state <= next_state;
 		end
 	end
-
 
 	always@* begin
 		case(current_state)
@@ -192,7 +192,6 @@ module pool2_ctrl(/*autoport*/
 	assign f4_raddr = f4_raddr_s3;
 
 
-	
 
 	//Write Address Gen
 	wire[4:0] f5_waddr_temp;
