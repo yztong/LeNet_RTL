@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool1_exec.v
 //  Created On    : 2018-01-02 17:16:08
-//  Last Modified : 2018-03-22 09:19:34
+//  Last Modified : 2018-03-22 10:41:30
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -23,8 +23,8 @@ module pool1_exec(/*autoport*/
 	input  	clk;
 	input  	rst_n;
 
-	input	[95:0]	f3_wdata;
-	output	[95:0] 	f2_rdata;
+	output	[95:0]	f3_wdata;
+	input	[95:0] 	f2_rdata;
 	input 	pool1_clr;
 
 	wire [15:0] d_in[5:0];
