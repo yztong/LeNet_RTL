@@ -1,14 +1,14 @@
 //==================================================================================================
 //  Filename      : conv_unit.v
 //  Created On    : 2018-01-05 14:28:03
-//  Last Modified : 2018-03-20 16:39:19
+//  Last Modified : 2018-03-22 14:43:02
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
 //  Description   : Basic conv_unit to realize bias add and ReLU. The actual Mult&Add is done by DSP.
-//
+//					2 stages pipeline.
 //
 //==================================================================================================
 module conv_unit(/*autoport*/

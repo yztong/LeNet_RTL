@@ -1,14 +1,15 @@
 //==================================================================================================
 //  Filename      : shared_mac_bank.v
 //  Created On    : 2017-12-29 19:17:28
-//  Last Modified : 2018-03-22 09:40:07
+//  Last Modified : 2018-03-22 14:48:15
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
-//
+//  Description   : shared_mac_bank Module. DSPs can be shared among all layers. 
+//					This work only sharded DSPs among conv1 conv2& fc1 layer since the 
+//					DSP resource is enough for this work.
 //
 //==================================================================================================
 module shared_mac_bank(/*autoport*/
@@ -88,17 +89,21 @@ wire	    SEL[213:0];
 
 generate
 	genvar i,j,k,l,m,n,x;
+//----------------------------------------
+//-Generate DSP units--------------------- 
+//----------------------------------------	
 	for(i=0;i<214;i=i+1) begin:mac_gen
-
-	MAC mac (
-  		.CLK(clk),      // input wire CLK
-  		.A(A[i]),          // input wire [15 : 0] A
- 		.B(B[i]),          // input wire [7 : 0] B
-  		.P(P[i]),          // output wire [47 : 0] P
-  		.SEL(SEL[i])  // input wire SCLRP
-	);
+		MAC mac (
+	  		.CLK(clk),      // input wire CLK
+	  		.A(A[i]),          // input wire [15 : 0] A
+	 		.B(B[i]),          // input wire [7 : 0] B
+	  		.P(P[i]),          // output wire [47 : 0] P
+	  		.SEL(SEL[i])  // input wire SCLRP
+		);
 	end
-
+//----------------------------------------
+//-Select Input A&B&SEL for each DSP unit- 
+//----------------------------------------
 	for(j=0;j<16;j=j+1) begin:sel1_loop16
 		for(x=0;x<6;x=x+1) begin
 			assign SEL[j*6+x] = sel? conv2_clr:fc1_clr; 
@@ -132,6 +137,9 @@ generate
 	
 endgenerate
 
+//----------------------------------------
+//-Mac Result Assignments-----------------
+//----------------------------------------
 assign mac_1 = {P[101],P[100],P[99],P[98],P[97],P[96]};
 assign mac_2 = {P[95],P[94],P[93],P[92],P[91],P[90],P[89],P[88],P[87],P[86],
 	P[85],P[84],P[83],P[82],P[81],P[80],P[79],P[78],P[77],P[76],P[75],P[74],

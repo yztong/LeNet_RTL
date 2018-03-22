@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : pool_unit.v
 //  Created On    : 2018-01-02 18:58:30
-//  Last Modified : 2018-03-21 15:14:48
+//  Last Modified : 2018-03-22 14:42:27
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Basic max-pooling unit.
 //
 //
 //==================================================================================================

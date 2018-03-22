@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : pool2_exec.v
 //  Created On    : 2018-01-02 17:16:08
-//  Last Modified : 2018-03-22 09:23:34
+//  Last Modified : 2018-03-22 14:36:14
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Pooling 2nd Layer Execute Module.
 //
 //
 //==================================================================================================
@@ -23,8 +23,8 @@ module pool2_exec(/*autoport*/
 	input  	clk;
 	input  	rst_n;
 
-	input	[255:0]	f4_rdata;
-	output	[255:0]	f5_wdata;
+	input	[255:0]	f4_rdata;	//input f4_1 ~ f4_16
+	output	[255:0]	f5_wdata;	//output f5_1 ~ f5_16
 	input 	pool2_clr;
 
 	wire [15:0] d_in[15:0];

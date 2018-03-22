@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : fc_unit.v
 //  Created On    : 2018-01-06 13:54:11
-//  Last Modified : 2018-01-22 14:10:10
+//  Last Modified : 2018-03-22 14:42:17
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Basic fc_unit, do bias add & ReLU, then write result to Register. 3 stage Pipeline. 
 //
 //
 //==================================================================================================

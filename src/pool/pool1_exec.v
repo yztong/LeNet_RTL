@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : pool1_exec.v
 //  Created On    : 2018-01-02 17:16:08
-//  Last Modified : 2018-03-22 10:41:30
+//  Last Modified : 2018-03-22 14:35:40
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Pooling 1st Layer Execute Module.
 //
 //
 //==================================================================================================
@@ -23,9 +23,9 @@ module pool1_exec(/*autoport*/
 	input  	clk;
 	input  	rst_n;
 
-	output	[95:0]	f3_wdata;
-	input	[95:0] 	f2_rdata;
-	input 	pool1_clr;
+	output	[95:0]	f3_wdata;	//output f3_1 ~ f3_6
+	input	[95:0] 	f2_rdata;	//input  f2_1 ~ f2_6
+	input 	pool1_clr;			
 
 	wire [15:0] d_in[5:0];
 	wire [15:0]	d_out[5:0];

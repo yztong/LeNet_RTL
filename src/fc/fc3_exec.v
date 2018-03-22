@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : fc3_exec.v
 //  Created On    : 2018-01-06 14:59:59
-//  Last Modified : 2018-03-21 18:33:38
+//  Last Modified : 2018-03-22 14:40:39
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : FC 3rd Layer Execute Module. Give the final 10 class value.
 //
 //
 //==================================================================================================
@@ -35,7 +35,7 @@ input clk;
 input rst_n;
 
 input f8_wr_en;
-input [229:0]	mac_5;
+input [229:0]	mac_5;	//mac result. mac5_1 ~ mac5_10
 
 
 output [15:0]  class0;

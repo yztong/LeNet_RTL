@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : fc2_exec.v
 //  Created On    : 2018-01-06 14:25:57
-//  Last Modified : 2018-03-21 17:25:17
+//  Last Modified : 2018-03-22 14:39:43
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : FC 2nd Layer Execute Module.
 //
 //
 //==================================================================================================
@@ -26,7 +26,7 @@ input clk;
 input rst_n;
 input f7_wr_en;
 
-input [1931:0] mac_4;
+input [1931:0] mac_4;	//mac result. mac4_1 ~ mac4_84.
 
 
 input [6:0]  f7_raddr;

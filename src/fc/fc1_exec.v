@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : fc1_exec.v
 //  Created On    : 2018-01-06 13:58:11
-//  Last Modified : 2018-03-21 17:23:41
+//  Last Modified : 2018-03-22 14:39:04
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : FC 1st Layer Execute Module.
 //
 //
 //==================================================================================================
@@ -25,11 +25,12 @@ input clk;
 input rst_n;
 
 input f6_wr_en;
-input [2759:0] mac_3;
+input [2759:0] mac_3;    //mac result. mac3_1 ~ mac3_120.
 
 input [6:0]  f6_raddr;
 output[15:0] f6_rdata;
 
+//Bias
 parameter b_1 = 16'b0000010110000110;
 parameter b_2 = 16'b1111111110101111;
 parameter b_3 = 16'b1111101000100100;

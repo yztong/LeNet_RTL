@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : pool1_ctrl.v
 //  Created On    : 2017-12-28 14:23:21
-//  Last Modified : 2018-03-21 15:16:55
+//  Last Modified : 2018-03-22 14:33:35
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -242,7 +242,7 @@ module pool1_ctrl(/*autoport*/
 	 	pool1_done_r5<=  pool1_done_r4;
 	 	pool1_done_r6<=  pool1_done_r5;
 
-	 	pool1_clr_r1 <= pool1_clr_temp;		 //pool_clr should assert at arrival cycle of data, so here is 3 + 2  
+	 	pool1_clr_r1 <= pool1_clr_temp;		 //pool_clr should assert at the arrival cycle of data, so here is 3 + 2  
 	 	pool1_clr_r2 <= pool1_clr_r1;
 	 	pool1_clr_r3 <= pool1_clr_r2;
 	 	pool1_clr_r4 <= pool1_clr_r3;

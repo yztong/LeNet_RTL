@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : conv2_exec.v
 //  Created On    : 2018-01-02 13:26:16
-//  Last Modified : 2018-03-22 09:14:21
+//  Last Modified : 2018-03-22 14:32:17
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
 //  Email         : yztong1994@gmail.com
 //
-//  Description   : 
+//  Description   : Conv 2nd Layer Execute Module.
 //
 //
 //==================================================================================================
@@ -19,15 +19,15 @@ module conv2_exec(/*autoport*/
 			clk,
 			rst_n);
 
-	input [2207:0] mac_2;
+	input [2207:0] mac_2; //mac result. mac2_1_1 ~ mac2_16_6
 	
 
 	input clk;
 	input rst_n;
 
-	output [255:0] f4_wdata;
+	output [255:0] f4_wdata; //f4_wdata. f4_1_wdata ~ f4_16_wdata
 
-
+//Bias
 parameter b_1 = 16'b0000001100101101;
 parameter b_2 = 16'b1111111010111110;
 parameter b_3 = 16'b0000000010100000;
