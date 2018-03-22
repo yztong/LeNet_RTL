@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : top_sim.v
 //  Created On    : 2018-01-14 14:04:33
-//  Last Modified : 2018-01-26 18:55:56
+//  Last Modified : 2018-03-22 10:38:27
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -62,64 +62,64 @@ integer pool2_1,pool2_2,pool2_3,pool2_4,pool2_5,pool2_6,
 integer fc1,fc2,fc3;
 
 initial begin
-	pool1_1 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool11.txt");
-	pool1_2 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool12.txt");
-	pool1_3 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool13.txt");
-	pool1_4 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool14.txt");
-	pool1_5 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool15.txt");
-	pool1_6 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool16.txt");
+	pool1_1 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool11.txt");
+	pool1_2 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool12.txt");
+	pool1_3 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool13.txt");
+	pool1_4 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool14.txt");
+	pool1_5 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool15.txt");
+	pool1_6 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool16.txt");
 
-	pool2_1 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool21.txt");
-	pool2_2 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool22.txt");
-	pool2_3 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool23.txt");
-	pool2_4 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool24.txt");
-	pool2_5 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool25.txt");
-	pool2_6 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool26.txt");
-	pool2_7 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool27.txt");
-	pool2_8 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool28.txt");
-	pool2_9 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool29.txt");
-	pool2_10 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool210.txt");
-	pool2_11 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool211.txt");
-	pool2_12 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool212.txt");
-	pool2_13 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool213.txt");
-	pool2_14 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool214.txt");
-	pool2_15 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool215.txt");
-	pool2_16 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\pool216.txt");
+	pool2_1 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool21.txt");
+	pool2_2 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool22.txt");
+	pool2_3 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool23.txt");
+	pool2_4 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool24.txt");
+	pool2_5 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool25.txt");
+	pool2_6 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool26.txt");
+	pool2_7 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool27.txt");
+	pool2_8 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool28.txt");
+	pool2_9 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool29.txt");
+	pool2_10 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool210.txt");
+	pool2_11 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool211.txt");
+	pool2_12 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool212.txt");
+	pool2_13 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool213.txt");
+	pool2_14 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool214.txt");
+	pool2_15 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool215.txt");
+	pool2_16 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\pool216.txt");
 
-	fc1 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\fc1.txt");
-	fc2 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\fc2.txt");
-	fc3 = $fopen("Z:\\work\\CNN\\2018_1_3src\\script\\perl\\fc3.txt");
+	fc1 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\fc1.txt");
+	fc2 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\fc2.txt");
+	fc3 = $fopen("C:\\Users\\YzTong\\Desktop\\LeNET_RTL\\script\\perl\\fc3.txt");
 end
 
 always@(posedge top_sim.CNN_accelerator.pool1_ctrl.f3_wr_en)begin
-	$fdisplay(pool1_1,"f3_waddr=%d,f3_1_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_1_wdata);
-	$fdisplay(pool1_2,"f3_waddr=%d,f3_2_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_2_wdata);
-	$fdisplay(pool1_3,"f3_waddr=%d,f3_3_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_3_wdata);
-	$fdisplay(pool1_4,"f3_waddr=%d,f3_4_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_4_wdata);
-	$fdisplay(pool1_5,"f3_waddr=%d,f3_5_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_5_wdata);
-	$fdisplay(pool1_6,"f3_waddr=%d,f3_6_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_6_wdata);
+	$fdisplay(pool1_1,"f3_waddr=%d,f3_1_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_wdata[15:0]);
+	$fdisplay(pool1_2,"f3_waddr=%d,f3_2_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_wdata[31:16]);
+	$fdisplay(pool1_3,"f3_waddr=%d,f3_3_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_wdata[47:32]);
+	$fdisplay(pool1_4,"f3_waddr=%d,f3_4_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_wdata[63:48]);
+	$fdisplay(pool1_5,"f3_waddr=%d,f3_5_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_wdata[79:64]);
+	$fdisplay(pool1_6,"f3_waddr=%d,f3_6_wdata=%d",top_sim.CNN_accelerator.f3_ram.f3_waddr,top_sim.CNN_accelerator.f3_ram.f3_wdata[95:80]);
 end
 
 
 always@(posedge top_sim.CNN_accelerator.pool2_ctrl.f5_wr_en)begin
 	
 
-	$fdisplay(pool2_1,"f5_waddr=%d,f5_1_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_1_wdata);
-	$fdisplay(pool2_2,"f5_waddr=%d,f5_2_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_2_wdata);
-	$fdisplay(pool2_3,"f5_waddr=%d,f5_3_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_3_wdata);
-	$fdisplay(pool2_4,"f5_waddr=%d,f5_4_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_4_wdata);
-	$fdisplay(pool2_5,"f5_waddr=%d,f5_5_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_5_wdata);
-	$fdisplay(pool2_6,"f5_waddr=%d,f5_6_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_6_wdata);
-	$fdisplay(pool2_7,"f5_waddr=%d,f5_7_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_7_wdata);
-	$fdisplay(pool2_8,"f5_waddr=%d,f5_8_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_8_wdata);
-	$fdisplay(pool2_9,"f5_waddr=%d,f5_9_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_9_wdata);
-	$fdisplay(pool2_10,"f5_waddr=%d,f5_10_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_10_wdata);
-	$fdisplay(pool2_11,"f5_waddr=%d,f5_11_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_11_wdata);
-	$fdisplay(pool2_12,"f5_waddr=%d,f5_12_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_12_wdata);
-	$fdisplay(pool2_13,"f5_waddr=%d,f5_13_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_13_wdata);
-	$fdisplay(pool2_14,"f5_waddr=%d,f5_14_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_14_wdata);
-	$fdisplay(pool2_15,"f5_waddr=%d,f5_15_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_15_wdata);
-	$fdisplay(pool2_16,"f5_waddr=%d,f5_16_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_16_wdata);
+	$fdisplay(pool2_1,"f5_waddr=%d,f5_1_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[15:0]);
+	$fdisplay(pool2_2,"f5_waddr=%d,f5_2_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[31:16]);
+	$fdisplay(pool2_3,"f5_waddr=%d,f5_3_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[47:32]);
+	$fdisplay(pool2_4,"f5_waddr=%d,f5_4_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[63:48]);
+	$fdisplay(pool2_5,"f5_waddr=%d,f5_5_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[79:64]);
+	$fdisplay(pool2_6,"f5_waddr=%d,f5_6_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[95:80]);
+	$fdisplay(pool2_7,"f5_waddr=%d,f5_7_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[111:96]);
+	$fdisplay(pool2_8,"f5_waddr=%d,f5_8_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[127:112]);
+	$fdisplay(pool2_9,"f5_waddr=%d,f5_9_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[143:128]);
+	$fdisplay(pool2_10,"f5_waddr=%d,f5_10_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[159:144]);
+	$fdisplay(pool2_11,"f5_waddr=%d,f5_11_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[175:160]);
+	$fdisplay(pool2_12,"f5_waddr=%d,f5_12_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[191:176]);
+	$fdisplay(pool2_13,"f5_waddr=%d,f5_13_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[207:192]);
+	$fdisplay(pool2_14,"f5_waddr=%d,f5_14_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[223:208]);
+	$fdisplay(pool2_15,"f5_waddr=%d,f5_15_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[239:224]);
+	$fdisplay(pool2_16,"f5_waddr=%d,f5_16_wdata=%d",top_sim.CNN_accelerator.f5_ram.f5_waddr,top_sim.CNN_accelerator.f5_ram.f5_wdata[255:240]);
 	
 end
 
