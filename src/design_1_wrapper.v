@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Thu Jan 25 18:20:08 2018
+//Date        : Thu Mar 22 14:49:33 2018
 //Host        : PC running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -25,21 +25,12 @@ module design_1_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
-    FCLK_CLK1_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb,
-    GPIO_0_tri_o,
-    GPIO_1_tri_i,
-    bram_addr_a_0,
-    bram_clk_a_0,
-    bram_en_a_0,
-    bram_we_a_0,
-    bram_wrdata_a_0,
-    peripheral_aresetn);
+    FIXED_IO_ps_srstb);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,21 +46,12 @@ module design_1_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
-  output FCLK_CLK1_0;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [0:0]GPIO_0_tri_o;
-  input [20:0]GPIO_1_tri_i;
-  output [14:0]bram_addr_a_0;
-  output bram_clk_a_0;
-  output bram_en_a_0;
-  output [3:0]bram_we_a_0;
-  output [31:0]bram_wrdata_a_0;
-  output [0:0]peripheral_aresetn;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -86,21 +68,12 @@ module design_1_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
-  wire FCLK_CLK1_0;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]GPIO_0_tri_o;
-  wire [20:0]GPIO_1_tri_i;
-  wire [14:0]bram_addr_a_0;
-  wire bram_clk_a_0;
-  wire bram_en_a_0;
-  wire [3:0]bram_we_a_0;
-  wire [31:0]bram_wrdata_a_0;
-  wire [0:0]peripheral_aresetn;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -118,19 +91,10 @@ module design_1_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
-        .FCLK_CLK1_0(FCLK_CLK1_0),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
-        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .GPIO_0_tri_o(GPIO_0_tri_o),
-        .GPIO_1_tri_i(GPIO_1_tri_i),
-        .bram_addr_a_0(bram_addr_a_0),
-        .bram_clk_a_0(bram_clk_a_0),
-        .bram_en_a_0(bram_en_a_0),
-        .bram_we_a_0(bram_we_a_0),
-        .bram_wrdata_a_0(bram_wrdata_a_0),
-        .peripheral_aresetn(peripheral_aresetn));
+        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb));
 endmodule
