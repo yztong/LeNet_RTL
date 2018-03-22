@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : CNN_accelerator.v
 //  Created On    : 2018-01-25 13:32:28
-//  Last Modified : 2018-03-21 18:45:20
+//  Last Modified : 2018-03-21 21:51:34
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -141,12 +141,12 @@ f1_ram f1_ram(/*autoinst*/
 			.ena(ena),
 			.f1_raddr(f1_raddr[9:0]));
 f2_ram f2_ram(/*autoinst*/
+			.f2_rdata(f2_rdata[95:0]),
 			.clk(clk),
 			.f2_wdata(f2_wdata[95:0]),
 			.f2_wr_en(f2_wr_en),
 			.f2_waddr(f2_waddr[9:0]),
-			.f2_raddr(f2_raddr[9:0]),
-			.f2_rdata(f2_rdata[95:0]));
+			.f2_raddr(f2_raddr[9:0]));
 f3_ram f3_ram(/*autoinst*/
 			.f3_rdata(f3_rdata[95:0]),
 			.clk(clk),

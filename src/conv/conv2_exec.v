@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : conv2_exec.v
 //  Created On    : 2018-01-02 13:26:16
-//  Last Modified : 2018-03-21 17:21:30
+//  Last Modified : 2018-03-22 09:14:21
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -71,9 +71,9 @@ generate
 			.rst_n(rst_n),
 			.d_in(d_in[k]),
 			.b_in(b_in[k]));
-		for(l=0;l<6;l=l+1) begin:loop6
-			assign mac2[6*k+l] = mac_2[(6*k+l)*23+22:(6*k+l)*23];
-		end
+	end
+	for(l=0;l<96;l=l+1) begin:loop96
+		assign mac2[l] = mac_2[23*l+22:23*l];
 	end
 endgenerate
 

@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : shared_mac_bank.v
 //  Created On    : 2017-12-29 19:17:28
-//  Last Modified : 2018-03-21 18:52:49
+//  Last Modified : 2018-03-22 09:40:07
 //  Revision      : 
 //  Author        : YzTong
 //  Company       : UESTC
@@ -100,8 +100,8 @@ generate
 	end
 
 	for(j=0;j<16;j=j+1) begin:sel1_loop16
-		for(x=0;x<6;x=x+1) begin:sel1_loop6
-			assign SEL[j] = sel? conv2_clr:fc1_clr; 
+		for(x=0;x<6;x=x+1) begin
+			assign SEL[j*6+x] = sel? conv2_clr:fc1_clr; 
 			assign A[j*6+x] = sel? f3_rdata[16*x+15:16*x] : f5_rdata;
 			assign B[j*6+x] = sel? w3_rdata[(j*6+x)*8+7:(j*6+x)*8] : w5_rdata[(j*6+x)*8+7:(j*6+x)*8];
 		end
