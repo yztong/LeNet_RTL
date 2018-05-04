@@ -1,1 +1,2560 @@
-d_out[15],d_out[14],d_out[13],d_out[12],d_out[11],d_out[10],d_out[9],d_out[8],d_out[7],d_out[6],d_out[5],d_out[4],d_out[3],d_out[2],d_out[1],d_out[0],
+141: if(flag[1])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+142: if(flag[2])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+143: if(flag[3])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+144: if(flag[4])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+145: if(flag[5])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+146: if(flag[6])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+147: if(flag[7])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+148: if(flag[8])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+149: if(flag[9])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+150: if(flag[10])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+151: if(flag[11])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+152: if(flag[12])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+153: if(flag[13])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+154: if(flag[14])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+155: if(flag[15])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+156: if(flag[16])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+157: if(flag[17])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+158: if(flag[18])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+159: if(flag[19])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+160: if(flag[20])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+161: if(flag[21])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+162: if(flag[22])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+163: if(flag[23])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+164: if(flag[24])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+165: if(flag[25])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+166: if(flag[26])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+167: if(flag[27])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+168: if(flag[28])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+169: if(flag[29])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+170: if(flag[30])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+171: if(flag[31])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+172: if(flag[32])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+173: if(flag[33])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+174: if(flag[34])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+175: if(flag[35])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+176: if(flag[36])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+177: if(flag[37])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+178: if(flag[38])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+179: if(flag[39])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+180: if(flag[40])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+181: if(flag[41])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+182: if(flag[42])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+183: if(flag[43])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+184: if(flag[44])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+185: if(flag[45])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+186: if(flag[46])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+187: if(flag[47])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+188: if(flag[48])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+189: if(flag[49])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+190: if(flag[50])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+191: if(flag[51])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+192: if(flag[52])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+193: if(flag[53])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+194: if(flag[54])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+195: if(flag[55])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+196: if(flag[56])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+197: if(flag[57])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+198: if(flag[58])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+199: if(flag[59])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+200: if(flag[60])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+201: if(flag[61])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+202: if(flag[62])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+203: if(flag[63])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+204: if(flag[64])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+205: if(flag[65])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+206: if(flag[66])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+207: if(flag[67])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+208: if(flag[68])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+209: if(flag[69])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+210: if(flag[70])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+211: if(flag[71])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+212: if(flag[72])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+213: if(flag[73])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+214: if(flag[74])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+215: if(flag[75])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+216: if(flag[76])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+217: if(flag[77])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+218: if(flag[78])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+219: if(flag[79])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+220: if(flag[80])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+221: if(flag[81])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+222: if(flag[82])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+223: if(flag[83])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+224: if(flag[84])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+225: if(flag[85])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+226: if(flag[86])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+227: if(flag[87])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+228: if(flag[88])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+229: if(flag[89])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+230: if(flag[90])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+231: if(flag[91])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+232: if(flag[92])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+233: if(flag[93])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+234: if(flag[94])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+235: if(flag[95])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+236: if(flag[96])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+237: if(flag[97])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+238: if(flag[98])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+239: if(flag[99])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+240: if(flag[100])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+241: if(flag[101])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+242: if(flag[102])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+243: if(flag[103])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+244: if(flag[104])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+245: if(flag[105])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+246: if(flag[106])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+247: if(flag[107])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+248: if(flag[108])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+249: if(flag[109])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+250: if(flag[110])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+251: if(flag[111])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+252: if(flag[112])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+253: if(flag[113])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+254: if(flag[114])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+255: if(flag[115])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+256: if(flag[116])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+257: if(flag[117])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+258: if(flag[118])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+259: if(flag[119])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+260: if(flag[120])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+261: if(flag[121])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+262: if(flag[122])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+263: if(flag[123])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+264: if(flag[124])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+265: if(flag[125])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+266: if(flag[126])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+267: if(flag[127])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+268: if(flag[128])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+269: if(flag[129])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+270: if(flag[130])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+271: if(flag[131])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+272: if(flag[132])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+273: if(flag[133])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+274: if(flag[134])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+275: if(flag[135])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+276: if(flag[136])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+277: if(flag[137])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+278: if(flag[138])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+279: if(flag[139])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+280: if(flag[140])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+281: if(flag[141])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+282: if(flag[142])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+283: if(flag[143])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+284: if(flag[144])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+285: if(flag[145])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+286: if(flag[146])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+287: if(flag[147])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+288: if(flag[148])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+289: if(flag[149])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+290: if(flag[150])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+291: if(flag[151])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+292: if(flag[152])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+293: if(flag[153])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+294: if(flag[154])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+295: if(flag[155])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+296: if(flag[156])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+297: if(flag[157])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+298: if(flag[158])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+299: if(flag[159])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+300: if(flag[160])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+301: if(flag[161])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+302: if(flag[162])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+303: if(flag[163])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+304: if(flag[164])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+305: if(flag[165])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+306: if(flag[166])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+307: if(flag[167])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+308: if(flag[168])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+309: if(flag[169])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+310: if(flag[170])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+311: if(flag[171])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+312: if(flag[172])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+313: if(flag[173])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+314: if(flag[174])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+315: if(flag[175])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+316: if(flag[176])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+317: if(flag[177])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+318: if(flag[178])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+319: if(flag[179])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+320: if(flag[180])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+321: if(flag[181])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+322: if(flag[182])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+323: if(flag[183])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+324: if(flag[184])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+325: if(flag[185])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+326: if(flag[186])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+327: if(flag[187])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+328: if(flag[188])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+329: if(flag[189])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+330: if(flag[190])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+331: if(flag[191])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+332: if(flag[192])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+333: if(flag[193])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+334: if(flag[194])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+335: if(flag[195])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+336: if(flag[196])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+337: if(flag[197])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+338: if(flag[198])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+339: if(flag[199])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+340: if(flag[200])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+341: if(flag[201])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+342: if(flag[202])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+343: if(flag[203])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+344: if(flag[204])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+345: if(flag[205])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+346: if(flag[206])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+347: if(flag[207])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+348: if(flag[208])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+349: if(flag[209])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+350: if(flag[210])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+351: if(flag[211])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+352: if(flag[212])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+353: if(flag[213])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+354: if(flag[214])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+355: if(flag[215])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+356: if(flag[216])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+357: if(flag[217])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+358: if(flag[218])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+359: if(flag[219])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+360: if(flag[220])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+361: if(flag[221])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+362: if(flag[222])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+363: if(flag[223])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+364: if(flag[224])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+365: if(flag[225])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+366: if(flag[226])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+367: if(flag[227])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+368: if(flag[228])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+369: if(flag[229])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+370: if(flag[230])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+371: if(flag[231])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+372: if(flag[232])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+373: if(flag[233])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+374: if(flag[234])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+375: if(flag[235])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+376: if(flag[236])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+377: if(flag[237])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+378: if(flag[238])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+379: if(flag[239])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+380: if(flag[240])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+381: if(flag[241])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+382: if(flag[242])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+383: if(flag[243])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+384: if(flag[244])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+385: if(flag[245])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+386: if(flag[246])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+387: if(flag[247])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+388: if(flag[248])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+389: if(flag[249])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+390: if(flag[250])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+391: if(flag[251])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+392: if(flag[252])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+393: if(flag[253])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+394: if(flag[254])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+395: if(flag[255])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+396: if(flag[256])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+397: if(flag[257])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+398: if(flag[258])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+399: if(flag[259])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+400: if(flag[260])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+401: if(flag[261])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+402: if(flag[262])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+403: if(flag[263])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+404: if(flag[264])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+405: if(flag[265])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+406: if(flag[266])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+407: if(flag[267])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+408: if(flag[268])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+409: if(flag[269])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+410: if(flag[270])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+411: if(flag[271])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+412: if(flag[272])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+413: if(flag[273])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+414: if(flag[274])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+415: if(flag[275])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+416: if(flag[276])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+417: if(flag[277])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+418: if(flag[278])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+419: if(flag[279])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+420: if(flag[280])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+421: if(flag[281])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+422: if(flag[282])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+423: if(flag[283])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+424: if(flag[284])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+425: if(flag[285])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+426: if(flag[286])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+427: if(flag[287])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+428: if(flag[288])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+429: if(flag[289])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+430: if(flag[290])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+431: if(flag[291])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+432: if(flag[292])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+433: if(flag[293])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+434: if(flag[294])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+435: if(flag[295])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+436: if(flag[296])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+437: if(flag[297])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+438: if(flag[298])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+439: if(flag[299])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+440: if(flag[300])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+441: if(flag[301])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+442: if(flag[302])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+443: if(flag[303])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+444: if(flag[304])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+445: if(flag[305])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+446: if(flag[306])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+447: if(flag[307])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+448: if(flag[308])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+449: if(flag[309])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+450: if(flag[310])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+451: if(flag[311])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+452: if(flag[312])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+453: if(flag[313])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+454: if(flag[314])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+455: if(flag[315])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+456: if(flag[316])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+457: if(flag[317])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+458: if(flag[318])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+459: if(flag[319])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+460: if(flag[320])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+461: if(flag[321])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+462: if(flag[322])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+463: if(flag[323])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+464: if(flag[324])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+465: if(flag[325])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+466: if(flag[326])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+467: if(flag[327])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+468: if(flag[328])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+469: if(flag[329])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+470: if(flag[330])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+471: if(flag[331])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+472: if(flag[332])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+473: if(flag[333])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+474: if(flag[334])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+475: if(flag[335])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+476: if(flag[336])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+477: if(flag[337])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+478: if(flag[338])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+479: if(flag[339])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+480: if(flag[340])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+481: if(flag[341])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+482: if(flag[342])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+483: if(flag[343])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+484: if(flag[344])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+485: if(flag[345])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+486: if(flag[346])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+487: if(flag[347])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+488: if(flag[348])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+489: if(flag[349])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+490: if(flag[350])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+491: if(flag[351])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+492: if(flag[352])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+493: if(flag[353])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+494: if(flag[354])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+495: if(flag[355])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+496: if(flag[356])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+497: if(flag[357])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+498: if(flag[358])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+499: if(flag[359])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+500: if(flag[360])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+501: if(flag[361])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+502: if(flag[362])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+503: if(flag[363])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+504: if(flag[364])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+505: if(flag[365])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+506: if(flag[366])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+507: if(flag[367])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+508: if(flag[368])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+509: if(flag[369])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+510: if(flag[370])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+511: if(flag[371])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+512: if(flag[372])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+513: if(flag[373])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+514: if(flag[374])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+515: if(flag[375])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+516: if(flag[376])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+517: if(flag[377])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+518: if(flag[378])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+519: if(flag[379])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+520: if(flag[380])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+521: if(flag[381])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+522: if(flag[382])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+523: if(flag[383])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+524: if(flag[384])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+525: if(flag[385])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+526: if(flag[386])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+527: if(flag[387])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+528: if(flag[388])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+529: if(flag[389])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+530: if(flag[390])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+531: if(flag[391])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+532: if(flag[392])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+533: if(flag[393])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+534: if(flag[394])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+535: if(flag[395])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+536: if(flag[396])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+537: if(flag[397])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+538: if(flag[398])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+539: if(flag[399])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+540: if(flag[400])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+541: if(flag[401])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+542: if(flag[402])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+543: if(flag[403])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+544: if(flag[404])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+545: if(flag[405])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+546: if(flag[406])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+547: if(flag[407])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+548: if(flag[408])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+549: if(flag[409])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+550: if(flag[410])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+551: if(flag[411])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+552: if(flag[412])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+553: if(flag[413])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+554: if(flag[414])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+555: if(flag[415])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+556: if(flag[416])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+557: if(flag[417])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+558: if(flag[418])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+559: if(flag[419])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+560: if(flag[420])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+561: if(flag[421])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+562: if(flag[422])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+563: if(flag[423])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+564: if(flag[424])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+565: if(flag[425])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+566: if(flag[426])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+567: if(flag[427])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+568: if(flag[428])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+569: if(flag[429])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+570: if(flag[430])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+571: if(flag[431])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+572: if(flag[432])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+573: if(flag[433])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+574: if(flag[434])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+575: if(flag[435])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+576: if(flag[436])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+577: if(flag[437])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+578: if(flag[438])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+579: if(flag[439])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+580: if(flag[440])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+581: if(flag[441])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+582: if(flag[442])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+583: if(flag[443])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+584: if(flag[444])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+585: if(flag[445])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+586: if(flag[446])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+587: if(flag[447])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+588: if(flag[448])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+589: if(flag[449])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+590: if(flag[450])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+591: if(flag[451])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+592: if(flag[452])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+593: if(flag[453])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+594: if(flag[454])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+595: if(flag[455])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+596: if(flag[456])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+597: if(flag[457])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+598: if(flag[458])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+599: if(flag[459])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+600: if(flag[460])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+601: if(flag[461])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+602: if(flag[462])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+603: if(flag[463])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+604: if(flag[464])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+605: if(flag[465])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+606: if(flag[466])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+607: if(flag[467])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+608: if(flag[468])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+609: if(flag[469])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+610: if(flag[470])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+611: if(flag[471])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+612: if(flag[472])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+613: if(flag[473])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+614: if(flag[474])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+615: if(flag[475])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+616: if(flag[476])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+617: if(flag[477])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+618: if(flag[478])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+619: if(flag[479])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+620: if(flag[480])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+621: if(flag[481])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+622: if(flag[482])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+623: if(flag[483])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+624: if(flag[484])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+625: if(flag[485])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+626: if(flag[486])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+627: if(flag[487])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+628: if(flag[488])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+629: if(flag[489])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+630: if(flag[490])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+631: if(flag[491])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+632: if(flag[492])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+633: if(flag[493])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+634: if(flag[494])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+635: if(flag[495])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+636: if(flag[496])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+637: if(flag[497])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+638: if(flag[498])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+639: if(flag[499])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+640: if(flag[500])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+641: if(flag[501])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+642: if(flag[502])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+643: if(flag[503])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+644: if(flag[504])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+645: if(flag[505])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+646: if(flag[506])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+647: if(flag[507])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+648: if(flag[508])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+649: if(flag[509])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+650: if(flag[510])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+651: if(flag[511])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+652: if(flag[512])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+653: if(flag[513])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+654: if(flag[514])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+655: if(flag[515])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+656: if(flag[516])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+657: if(flag[517])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+658: if(flag[518])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+659: if(flag[519])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+660: if(flag[520])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+661: if(flag[521])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+662: if(flag[522])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+663: if(flag[523])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+664: if(flag[524])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+665: if(flag[525])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+666: if(flag[526])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+667: if(flag[527])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+668: if(flag[528])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+669: if(flag[529])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+670: if(flag[530])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+671: if(flag[531])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+672: if(flag[532])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+673: if(flag[533])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+674: if(flag[534])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+675: if(flag[535])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+676: if(flag[536])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+677: if(flag[537])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+678: if(flag[538])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+679: if(flag[539])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+680: if(flag[540])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+681: if(flag[541])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+682: if(flag[542])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+683: if(flag[543])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+684: if(flag[544])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+685: if(flag[545])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+686: if(flag[546])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+687: if(flag[547])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+688: if(flag[548])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+689: if(flag[549])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+690: if(flag[550])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+691: if(flag[551])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+692: if(flag[552])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+693: if(flag[553])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+694: if(flag[554])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+695: if(flag[555])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+696: if(flag[556])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+697: if(flag[557])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+698: if(flag[558])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+699: if(flag[559])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+700: if(flag[560])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+701: if(flag[561])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+702: if(flag[562])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+703: if(flag[563])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+704: if(flag[564])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+705: if(flag[565])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+706: if(flag[566])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+707: if(flag[567])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+708: if(flag[568])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+709: if(flag[569])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+710: if(flag[570])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+711: if(flag[571])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+712: if(flag[572])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+713: if(flag[573])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+714: if(flag[574])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+715: if(flag[575])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+716: if(flag[576])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+717: if(flag[577])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+718: if(flag[578])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+719: if(flag[579])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+720: if(flag[580])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+721: if(flag[581])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+722: if(flag[582])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+723: if(flag[583])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+724: if(flag[584])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+725: if(flag[585])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+726: if(flag[586])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+727: if(flag[587])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+728: if(flag[588])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+729: if(flag[589])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+730: if(flag[590])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+731: if(flag[591])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+732: if(flag[592])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+733: if(flag[593])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+734: if(flag[594])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+735: if(flag[595])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+736: if(flag[596])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+737: if(flag[597])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+738: if(flag[598])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+739: if(flag[599])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+740: if(flag[600])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+741: if(flag[601])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+742: if(flag[602])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+743: if(flag[603])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+744: if(flag[604])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+745: if(flag[605])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+746: if(flag[606])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+747: if(flag[607])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+748: if(flag[608])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+749: if(flag[609])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+750: if(flag[610])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+751: if(flag[611])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+752: if(flag[612])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+753: if(flag[613])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+754: if(flag[614])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+755: if(flag[615])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+756: if(flag[616])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+757: if(flag[617])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+758: if(flag[618])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+759: if(flag[619])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+760: if(flag[620])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+761: if(flag[621])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+762: if(flag[622])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+763: if(flag[623])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+764: if(flag[624])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+765: if(flag[625])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+766: if(flag[626])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+767: if(flag[627])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+768: if(flag[628])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+769: if(flag[629])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+770: if(flag[630])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+771: if(flag[631])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+772: if(flag[632])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+773: if(flag[633])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+774: if(flag[634])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+775: if(flag[635])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+776: if(flag[636])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+777: if(flag[637])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+778: if(flag[638])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+779: if(flag[639])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
+780: if(flag[640])
+			vga_rgb <={DATA_W{1'b0}};
+			else
+			vga_rgb <=~{DATA_W{din}};
