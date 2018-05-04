@@ -1,48 +1,7 @@
 # LeNET_RTL
 LeNET的RTL实现
 
-加速器内容在src目录下，部分IP，如Memory Block，DSP未添加。
-LENET_RTL\SRC
-│  CNN_accelerator.v
-│  shared_mac_bank.v
-│
-├─conv
-│      channel_adder.v
-│      conv1_ctrl.v
-│      conv1_exec.v
-│      conv2_ctrl.v
-│      conv2_exec.v
-│      conv_unit.v
-│
-├─fc
-│      fc1_ctrl.v
-│      fc1_exec.v
-│      fc2_ctrl.v
-│      fc2_exec.v
-│      fc3_ctrl.v
-│      fc3_exec.v
-│      fc_unit.v
-│      get_class.v
-│
-├─memory
-│      f1_ram.v
-│      f2_ram.v
-│      f3_ram.v
-│      f4_ram.v
-│      f5_ram.v
-│      w1_rom.v
-│      w3_rom.v
-│      w5_rom.v
-│      w6_rom.v
-│      w7_rom.v
-│
-└─pool
-       pool1_ctrl.v
-       pool1_exec.v
-       pool2_ctrl.v
-       pool2_exec.v
-       pool_unit.v
-
+![8](image\8.png)
 
 **CNN_accelerator.v是加速器的顶层；**
 **shared_mac_bank.v是共享的DSP块的阵列；**
@@ -65,7 +24,7 @@ LENET_RTL\SRC
 
 LeNet-5模型一共有7层，下图展示了LeNet-5模型的架构
 
-![1525227416624](C:\Users\YzTong\Desktop\7.png)
+![1525227416624](image\7.png)
 
 ​							LeNET-5的基本结构
 
@@ -93,13 +52,13 @@ LeNet-5模型一共有7层，下图展示了LeNet-5模型的架构
 
 卷积层的主要由控制逻辑，共享的乘法器块，加法器树，和ReLU处理构成。特征图和卷积核的权重存储在片内的buffer中。控制逻辑根据时序逐行扫描，给出相应的输入feature读地址和weight读地址，以及输出buffer的写地址；feature buffer和weight buffer给出的读数据通过乘加器块运算后，进入加法器树完成偏置加法和ReLU后写到输出的feature buffer。 
 
-![TI}_OJC)LCVWK)7NU8A87](C:\Users\YzTong\Desktop\1.png)
+![TI}_OJC)LCVWK)7NU8A87](image\1.png)
 
 **池化层的实现**
 
 池化层的结构和卷积层类似，区别在于有自己的控制模块和计算单元。控制模块产生memory的读写地址来扫描整个输入特征图。因为采用最大池化，计算单元是一个比较器。不同输入层的运算是并行的。 
 
-![2](C:\Users\YzTong\Desktop\2.png)
+![2](image\2.png)
 
 **全连层的实现**
 
@@ -111,18 +70,18 @@ LeNet-5模型一共有7层，下图展示了LeNet-5模型的架构
 
 基于ZYNQ的CNN加速器系统的顶层视图如图所示。系统包含ZYNQ7 处理器，用于传送输入图片加速器(权重以及偏置的参数已经制作成coe，导入到ram/rom的IP中)。 DMA引擎则用于实现从片外DDR3存储器到FPGA片上存储的数据搬运。这些标准IP都连接到了AXI总线上。当图片导入到DDR3后，DMA引擎开始搬运数据到片内存储，并开始CNN加速器的运算；在运算结束后，加速器通过PL中断告知处理器，处理器取得运算结果。 
 
-![3](C:\Users\YzTong\Desktop\3.png)
+![3](image\3.png)
 
 ------
 
 卷积神经网络通常通过多个卷积层和池化层的合作来将低级的输入特征解释为高级特征。通过最后的分类层，比如全连接层，可以将这些高级特征通过有限个类别输出来分类。
 卷积层：卷积，对N_if个输入特征图，与N_k个K×K大小的卷积滤波器（kernel）进行3维的乘法和乘累加操作，最后得到一个输出的特征图。计算公式见式1，计算过程如图1所示。
 
-![5](C:\Users\YzTong\Desktop\5.png)
+![5](image\5.png)
 
 ​									*图1：CNN的卷积和池化过程*
 
-![6](C:\Users\YzTong\Desktop\6.png)
+![6](image\6.png)
 
 out(f_o,x,y)和in(f_i,x,y)分别代表特征图fo和fi中点(x,y)处的神经单元值。wt(fo,fi,k_x,k_y)是用于和fi输入特征图卷积来产生输出特征图fo的kernel在点(k_x,k_y)的值。
 池化层：池化层通常放置在卷积层的后面，用于减少输入特征图的维度。算法是用最大值或平均值来替换K_p×K_p大小的输入单元。如图1所示。
